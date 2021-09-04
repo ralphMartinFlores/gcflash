@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor's Homepage</title>
+</head>
+<body>
+    <div class="main-container">
+        <mat-sidenav-container>
+            <mat-sidenav mode="side" opened>
+                <!-- Content of the sidenav -->
+                <div class="sidenav__content">
+
+                    <!-- Temporary logo placeholder -->
+                    <div class="logo-placeholder-container">
+                        <img src="../../assets/images/flash-logo-temp-removebg-preview.png">
+                    </div>
+
+                    <!-- White divider line -->
+                    <mat-divider></mat-divider>
+
+                    <!-- Sidenav buttons -->
+                    <div class="sidenav__buttons">
+                        <button mat-button class="sidenav__button">
+                            <mat-icon>home</mat-icon>
+                            <span>Home</span>
+                        </button>
+                        <button mat-button class="sidenav__button">
+                            <mat-icon>videocam</mat-icon>
+                            <span>Records</span>
+                        </button>
+                        <button mat-button class="sidenav__button">
+                            <mat-icon>logout</mat-icon>
+                            <span>Logout</span>
+                        </button>
+                    </div>
+                    <!-- End of buttons -->
+
+                    <!-- White divider line -->
+                    <mat-divider></mat-divider>
+                </div>
+            </mat-sidenav>
+
+            <mat-sidenav-content>
+                <!-- Toolbar containing sidenav toggle button -->
+                <mat-toolbar>
+                    <button mat-icon-button (click)="sidenav.toggle()">
+                      <mat-icon>menu</mat-icon>
+                    </button>
+                    <span class="example-spacer"></span>
+                    <button mat-icon-button>
+                      <mat-icon>account_circle</mat-icon>
+                    </button>
+                  </mat-toolbar>
+                
+                <!-- Main content container -->
+                <div class="maincontent__container">
+                    <div class="greeting-text">
+                        <h1>Welcome, Professor!</h1>
+                        <p>What would you like to do for today?</p>
+                    </div>
+                    <div class="main__content">
+                        <!-- Meetings container -->
+                        <div class="meetings__container">
+                            <div class="datetime__container">
+                                <p>10:53 AM</p>
+                                <p>Saturday, September 4 2021</p>
+                            </div>
+
+                            <mat-card>
+                                <div class="card__title">
+                                    <img src="../../assets/images/blackboard.png">
+                                    <p>IT Elective 7 (LAB) - Digital Audio and Video Production in Multimedia</p>
+                                </div>
+                                <div class="card__content">
+                                    <p>4:00 PM-6:00 PM</p>
+                                </div>
+                            </mat-card>
+
+                            <mat-card>
+                                <div class="card__title">
+                                    <img src="../../assets/images/round-table.png">
+                                    <p>Faculty Meeting</p>
+                                </div>
+                                <div class="card__content">
+                                    <p>7:00 PM-9:00 PM</p>
+                                </div>
+                            </mat-card>
+
+                            <mat-card>
+                                <div class="card__title">
+                                    <img src="../../assets/images/round-table.png">
+                                    <p>Faculty Meeting</p>
+                                </div>
+                                <div class="card__content">
+                                    <p>7:00 PM-9:00 PM</p>
+                                </div>
+                            </mat-card>
+
+                            <mat-card>
+                                <div class="card__title">
+                                    <img src="../../assets/images/round-table.png">
+                                    <p>Faculty Meeting</p>
+                                </div>
+                                <div class="card__content">
+                                    <p>7:00 PM-9:00 PM</p>
+                                </div>
+                            </mat-card>
+                            
+                        </div>
+                        <!-- End of container -->
+
+                        <!-- Meeting options container -->
+                        <div class="meetingsoptions__container">
+                            <div class="meetingoption">
+                                <mat-icon>videocam</mat-icon>
+                                <span>Start a New Meeting</span>
+                            </div>
+                            <div class="graymeetingoption">
+                                <mat-icon>screen_share</mat-icon>
+                                <span>Share Screen</span>
+                            </div>
+                            <div class="graymeetingoption">
+                                <mat-icon>event</mat-icon>
+                                <span>Schedule a New Meeting</span>
+                            </div>
+                        </div>
+                        <!-- End of container -->
+                    </div>
+                </div>
+            </mat-sidenav-content>
+        </mat-sidenav-container>
+    </div>
+</body>
+</html>
