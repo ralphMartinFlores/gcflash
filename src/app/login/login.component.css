@@ -61,6 +61,18 @@
     cursor: pointer;
 }
 
+.logo-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    height: auto;
+    width: 100%;
+}
+
+
 @media (max-width: 800px) { 
     .main-container {
         display: flex;
@@ -74,5 +86,14 @@
 
     .login-btn {
         width: 80%;
+    }
+
+    .logo-container{
+        width: 1rem !important;
+        height: auto;
+    }
+
+    .graphic-container{
+        display: none;
     }
 }
