@@ -13,12 +13,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
+import { ProfMeetingtypeComponent } from './prof-meetingtype/prof-meetingtype.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ProfHomeComponent
+    ProfHomeComponent,
+    ProfMeetingtypeComponent
   ],
   imports: [
     BrowserModule,
