@@ -54,6 +54,19 @@ mat-toolbar {
     margin: 0;
 }
 
+.btn-save {
+    position: absolute;
+    width: 124px;
+    height: 52px;
+    background-color: #0166B3;
+    color: #FFF;
+    border-radius: 14px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 960px;
+    margin-top: -60px;
+}
+
 .main__content {
     display: flex;
     gap: 1rem;
