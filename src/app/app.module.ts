@@ -13,14 +13,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
+
 import { ProfMeetingtypeComponent } from './prof-meetingtype/prof-meetingtype.component';
+import { ProfMeetingfullscreenComponent } from './prof-meetingfullscreen/prof-meetingfullscreen.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ProfHomeComponent,
-    ProfMeetingtypeComponent
+    ProfMeetingtypeComponent,
+    ProfMeetingfullscreenComponent
   ],
   imports: [
     BrowserModule,
