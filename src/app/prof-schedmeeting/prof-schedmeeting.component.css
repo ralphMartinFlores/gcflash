@@ -1,0 +1,275 @@
+/* Start of sidenav and toolbar styles */
+mat-sidenav {
+    width: 200px;
+    background-color: #0166B3;
+    color: white;
+}
+
+mat-sidenav-container {
+    height: 100vh;
+}
+
+mat-divider {
+    width: 75%;
+    margin: 1rem auto;
+    background-color: white;
+}
+
+mat-toolbar {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: #FFF;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.logo-placeholder-container  img {
+    width: 100%;
+    height: auto;
+}
+
+.sidenav__button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.sidenav__button mat-icon {
+    margin-right: 1rem;
+}
+/* End of sidenav and toolbar styles */
+
+
+/* Main content styles */
+.maincontent__container {
+    padding: 2rem;
+}
+
+.greeting-text > h1 {
+    color: #0166B3;
+    margin: 0;
+}
+
+.btn-save {
+    position: absolute;
+    width: 124px;
+    height: 52px;
+    background-color: #0166B3;
+    color: #FFF;
+    border-radius: 14px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 960px;
+    margin-top: -60px;
+}
+
+.main__content {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* Start of Meeting info styles */
+.meeting-info {
+    border: 2px solid #0166B3;
+    border-radius: 0.625rem;
+    padding: 0.625rem;
+    flex-grow: 1;
+}
+
+.meeting-name {
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+.meeting-topic, .meeting-datetime, .meeting-occurs, 
+.meeting-link {
+    padding-bottom: 50px;
+}
+
+.meeting-pword {
+    padding-bottom: 20px;
+}
+
+.meet-name {
+    width: 543px;
+    height: 62px;
+    font-size: 25px;
+    font-weight: 700;
+    color: #2F2D2D;
+    border: 1px solid #B0B0B0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.meet-name:focus, .meet-topic:focus, .meet-startdate:focus, 
+.meet-enddate:focus, .meet-starttime:focus, .meet-endtime:focus,
+.meet-pword:focus, .search-participant:focus {
+    outline: none;
+}
+
+input[type="text"], input[type="date"], input[type="time"] {
+    padding-left: 15px;
+}
+
+.meet-topic {
+    width: 543px;
+    height: 106px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #2F2D2D;
+    border: 1px solid #B0B0B0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    line-height: 22px;
+    display: block;
+    margin: 0 auto;
+}
+
+textarea {
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+.label-meeting-datetime, .label-meeting-occurs, .label-meeting-link, .label-meeting-pword {
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #2F2D2D;
+}
+
+.meeting-datetime {
+    padding-left: 15px;
+}
+
+.meet-startdate, .meet-enddate {
+    width: 150px;
+    height: 37px;
+    background: #DEDEDE;
+    border-radius: 5px;
+    border: 1px solid #B0B0B0;
+    margin-right: 10px;
+}
+
+.meet-starttime, .meet-endtime {
+    width: 120px;
+    height: 37px;
+    background: #DEDEDE;
+    border-radius: 5px;
+    border: 1px solid #B0B0B0;
+}
+
+.meet-startend-divider {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.meeting-occurs {
+    padding-left: 30px;
+}
+
+.meet-occurs {
+    margin: 0 12px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+::ng-deep .mat-checkbox-checked .mat-checkbox-background, 
+.mat-checkbox-indeterminate .mat-checkbox-background {
+    /* overwrites the checkbox background */
+    background-color: #0166B3 !important;
+}
+
+::ng-deep .mat-checkbox:not(.mat-checkbox-disabled) .mat-checkbox-ripple .mat-ripple-element {
+    /* overwrites the ripple overlay on hover and click */
+    background-color: #0166B3 !important;
+}
+
+.meeting-link {
+    padding-left: 80px;
+}
+
+.meet-link {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.meet-pword {
+    width: 543px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #2F2D2D;
+    border: 1px solid #B0B0B0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.meeting-pword {
+    padding-left: 15px;
+}
+
+#meetingPword {
+    padding-bottom: 20px;
+    padding-left: 15px;
+}
+/* End of Meeting info styles */
+
+
+/* Start of Meeting invites styles */
+.meeting-invites {
+    padding: 0.625rem;
+    flex-grow: 1;
+}
+
+.searchbox {
+    margin-top: 20px;
+}
+
+.search-icon {
+    position: absolute;
+    margin-top: 7px;
+    margin-left: 310px;
+}
+
+.search-participant, .search-guest {
+    width: 340px;
+    height: 38px;
+    font-size: 15px;
+    font-weight: 400;
+    background: #D5D5D5;
+    border: 1px solid #B0B0B0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #2F2D2D;
+}
+
+.select-checkbox {
+    margin-top: 10px;
+}
+
+.select-all {
+    padding-left: 20px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.select-participant {
+    padding-left: 20px;
+    margin-top: 20px;
+}
+/* End of Meeting invites styles */
+
+
+/* End of Main content styles */

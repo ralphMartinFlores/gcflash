@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor's Homepage</title>
+</head>
+<body>
+    <div class="main-container">
+        <mat-sidenav-container>
+            <mat-sidenav mode="side" opened>
+                <!-- Content of the sidenav -->
+                <div class="sidenav__content">
+
+                    <!-- Temporary logo placeholder -->
+                    <div class="logo-placeholder-container">
+                        <img src="../../assets/images/flash-logo-temp-removebg-preview.png">
+                    </div>
+
+                    <!-- White divider line -->
+                    <mat-divider></mat-divider>
+
+                    <!-- Sidenav buttons -->
+                    <div class="sidenav__buttons">
+                        <button mat-button class="sidenav__button">
+                            <mat-icon>home</mat-icon>
+                            <span>Home</span>
+                        </button>
+                        <button mat-button class="sidenav__button">
+                            <mat-icon>videocam</mat-icon>
+                            <span>Records</span>
+                        </button>
+                        <button mat-button class="sidenav__button">
+                            <mat-icon>logout</mat-icon>
+                            <span>Logout</span>
+                        </button>
+                    </div>
+                    <!-- End of buttons -->
+
+                    <!-- White divider line -->
+                    <mat-divider></mat-divider>
+                </div>
+            </mat-sidenav>
+
+            <mat-sidenav-content>
+                <!-- Toolbar containing sidenav toggle button -->
+                <mat-toolbar>
+                    <button mat-icon-button (click)="sidenav.toggle()">
+                      <mat-icon>menu</mat-icon>
+                    </button>
+                    <span class="example-spacer"></span>
+                    <button mat-icon-button>
+                      <mat-icon>account_circle</mat-icon>
+                    </button>
+                </mat-toolbar>
+
+                <div class="maincontent__container">
+                    <div class="greeting-text">
+                        <h1>Schedule a Meeting</h1>
+                        <button mat-raised-button class="btn-save">SAVE</button>
+                    </div>
+                    <div class="main__content">
+                        <!-- Meeting information side -->
+                        <div class="meeting-info">
+                            <div class="meeting-name">
+                                <input type="text" placeholder="Meet Name" class="meet-name">
+                            </div>
+                            <div class="meeting-topic">
+                                <textarea placeholder="Add a short topic (optional)" class="meet-topic"></textarea>
+                            </div>
+                            <div class="label-meeting-datetime">
+                                <label for="meet-datetime">Meeting Time</label>
+                            </div>
+                            <div class="meeting-datetime">    
+                                <input type="date" class="meet-startdate">
+                                <input type="time" class="meet-starttime">
+                                <span class="meet-startend-divider">to</span>
+                                <input type="date" class="meet-enddate">
+                                <input type="time" class="meet-endtime">
+                            </div>
+                            <div class="label-meeting-occurs">
+                                <label for="meet-occurs">Occurs Every</label>
+                            </div>
+                            <div class="meeting-occurs">
+                                <mat-checkbox class="meet-occurs">Sun</mat-checkbox>
+                                <mat-checkbox class="meet-occurs">Mon</mat-checkbox>
+                                <mat-checkbox class="meet-occurs">Tue</mat-checkbox>
+                                <mat-checkbox class="meet-occurs">Wed</mat-checkbox>
+                                <mat-checkbox class="meet-occurs">Thu</mat-checkbox>
+                                <mat-checkbox class="meet-occurs">Fri</mat-checkbox>
+                                <mat-checkbox class="meet-occurs">Sat</mat-checkbox>
+                            </div>
+                            <div class="label-meeting-link">
+                                <label for="meet-link">Meeting Link</label>
+                            </div>
+                            <div class="meeting-link">
+                                <p class="meet-link">*insert meeting link here*</p>
+                            </div>
+                            <div class="label-meeting-pword">
+                                <label for="meet-pword">Meeting Password (optional)</label>
+                            </div>
+                            <div class="meeting-pword">
+                                <mat-checkbox>Require</mat-checkbox>
+                            </div>
+                            <div id="meetingPword">
+                                <input type="text" placeholder="Meeting Password" class="meet-pword">
+                            </div>
+                        </div>
+                        <div class="meeting-invites">
+                            <mat-tab-group>
+                                <mat-tab label="Participants" class="participants-tab">
+                                    <div class="searchbox">
+                                        <mat-icon aria-hidden="false" class="search-icon">search</mat-icon>
+                                        <input type="text" placeholder="Search a participant" class="search-participant">
+                                    </div>
+                                    <div class="select-checkbox">
+                                        <mat-checkbox class="select-all">Select all participants</mat-checkbox>
+                                    </div>
+                                    <div class="participant-checkbox">
+                                        <mat-checkbox class="select-participant">201810082@gordoncollege.edu.ph</mat-checkbox>
+                                    </div>
+                                </mat-tab>
+                                <mat-tab label="Guests">
+                                    <div class="searchbox">
+                                        <mat-icon aria-hidden="false" class="search-icon">search</mat-icon>
+                                        <input type="text" placeholder="Search a guest" class="search-guest">
+                                    </div>
+                                    <div class="select-checkbox">
+                                        <mat-checkbox class="select-all">Select all participants</mat-checkbox>
+                                    </div>
+                                    <div class="participant-checkbox">
+                                        <mat-checkbox class="select-participant">201810082@gordoncollege.edu.ph</mat-checkbox>
+                                    </div>
+                                </mat-tab>
+                            </mat-tab-group>
+                        </div>
+                    </div>
+                </div>
+            </mat-sidenav-content>
+        </mat-sidenav-container>
+    </div>
+</body>
+</html>
