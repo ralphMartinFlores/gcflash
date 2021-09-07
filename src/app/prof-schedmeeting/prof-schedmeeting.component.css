@@ -49,13 +49,18 @@ mat-toolbar {
     padding: 2rem;
 }
 
+.greeting-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .greeting-text > h1 {
     color: #0166B3;
     margin: 0;
 }
 
-.btn-save {
-    position: absolute;
+.save__button {
     width: 124px;
     height: 52px;
     background-color: #0166B3;
@@ -63,8 +68,6 @@ mat-toolbar {
     border-radius: 14px;
     font-size: 20px;
     font-weight: 700;
-    margin-left: 960px;
-    margin-top: -60px;
 }
 
 .main__content {
@@ -77,47 +80,38 @@ mat-toolbar {
 
 
 /* Start of Meeting info styles */
-.meeting-info {
+.meetinginfo__container {
     border: 2px solid #0166B3;
     border-radius: 0.625rem;
     padding: 0.625rem;
     flex-grow: 1;
 }
 
-.meeting-name {
-    padding-bottom: 30px;
+.meeting__info {
     padding-top: 20px;
-}
-
-.meeting-topic, .meeting-datetime, .meeting-occurs, 
-.meeting-link {
-    padding-bottom: 50px;
-}
-
-.meeting-pword {
+    padding-left: 30px;
     padding-bottom: 20px;
 }
 
+input[type="text"], input[type="datetime-local"] {
+    padding-left: 15px;
+}
+
 .meet-name {
+    display: flex;
     width: 543px;
     height: 62px;
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 700;
     color: #2F2D2D;
     border: 1px solid #B0B0B0;
     box-sizing: border-box;
     border-radius: 10px;
-    display: block;
-    margin: 0 auto;
+    margin-bottom: 25px;
 }
 
-.meet-name:focus, .meet-topic:focus, .meet-startdate:focus, 
-.meet-enddate:focus, .meet-starttime:focus, .meet-endtime:focus,
-.meet-pword:focus, .search-participant:focus {
-    outline: none;
-}
-
-input[type="text"], input[type="date"], input[type="time"] {
+textarea {
+    padding-top: 10px;
     padding-left: 15px;
 }
 
@@ -131,78 +125,57 @@ input[type="text"], input[type="date"], input[type="time"] {
     box-sizing: border-box;
     border-radius: 10px;
     line-height: 22px;
-    display: block;
-    margin: 0 auto;
+    margin: 0 auto 20px; /* margin: top, right and left, bottom */
 }
 
-textarea {
-    padding-top: 10px;
-    padding-left: 15px;
-}
-
-.label-meeting-datetime, .label-meeting-occurs, .label-meeting-link, .label-meeting-pword {
-    margin-bottom: 15px;
-    font-size: 22px;
+.label__container {
+    font-size: 18px;
     font-weight: 700;
     color: #2F2D2D;
+    margin-bottom: 15px;
 }
 
-.meeting-datetime {
-    padding-left: 15px;
+.meetingdatetime__container {
+    margin-bottom: 25px;
 }
 
-.meet-startdate, .meet-enddate {
-    width: 150px;
+.meetingdatetime__container1 {
+    margin-left: 27px;
+}
+
+.meet-startdatetime, .meet-enddatetime {
+    width: 225px;
     height: 37px;
-    background: #DEDEDE;
     border-radius: 5px;
     border: 1px solid #B0B0B0;
-    margin-right: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
 }
 
-.meet-starttime, .meet-endtime {
-    width: 120px;
-    height: 37px;
-    background: #DEDEDE;
-    border-radius: 5px;
-    border: 1px solid #B0B0B0;
+.meetdatetime__divider {
+    margin: 0px 30px 0px 30px; /* margin: top, left, bottom, right*/
 }
 
-.meet-startend-divider {
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.meeting-occurs {
-    padding-left: 30px;
+.meetingoccurs__container {
+    margin-top: 15px;
+    margin-bottom: 25px;
 }
 
 .meet-occurs {
     margin: 0 12px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
-}
-
-::ng-deep .mat-checkbox-checked .mat-checkbox-background, 
-.mat-checkbox-indeterminate .mat-checkbox-background {
-    /* overwrites the checkbox background */
-    background-color: #0166B3 !important;
-}
-
-::ng-deep .mat-checkbox:not(.mat-checkbox-disabled) .mat-checkbox-ripple .mat-ripple-element {
-    /* overwrites the ripple overlay on hover and click */
-    background-color: #0166B3 !important;
-}
-
-.meeting-link {
-    padding-left: 80px;
 }
 
 .meet-link {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+
+.pword-checkbox {
+    margin: 10px;
 }
 
 .meet-pword {
@@ -216,35 +189,42 @@ textarea {
     border-radius: 10px;
 }
 
-.meeting-pword {
-    padding-left: 15px;
+.meet-name:focus, .meet-topic:focus, .meet-startdatetime:focus, 
+.meet-enddatetime:focus, .meet-pword:focus {
+    outline: none;
 }
 
-#meetingPword {
-    padding-bottom: 20px;
-    padding-left: 15px;
+::ng-deep .mat-checkbox-checked .mat-checkbox-background, 
+.mat-checkbox-indeterminate .mat-checkbox-background {
+    /* overwrites the checkbox background */
+    background-color: #0166B3 !important;
+}
+
+::ng-deep .mat-checkbox:not(.mat-checkbox-disabled) .mat-checkbox-ripple .mat-ripple-element {
+    /* overwrites the ripple overlay on hover and click */
+    background-color: #0166B3 !important;
 }
 /* End of Meeting info styles */
 
 
 /* Start of Meeting invites styles */
-.meeting-invites {
+.meeting__invites {
     padding: 0.625rem;
     flex-grow: 1;
 }
 
 .searchbox {
-    margin-top: 20px;
+    display: flex;
+    margin-top: 10px;
 }
 
 .search-icon {
-    position: absolute;
     margin-top: 7px;
-    margin-left: 310px;
+    margin-left: -30px;
 }
 
 .search-participant, .search-guest {
-    width: 340px;
+    width: 390px;
     height: 38px;
     font-size: 15px;
     font-weight: 400;
@@ -253,10 +233,11 @@ textarea {
     box-sizing: border-box;
     border-radius: 5px;
     color: #2F2D2D;
+    margin-left: 10px;
 }
 
 .select-checkbox {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .select-all {
@@ -265,11 +246,127 @@ textarea {
     font-weight: 400;
 }
 
-.select-participant {
+.select-participant, .select-guest {
     padding-left: 20px;
     margin-top: 20px;
 }
+
+.search-participant:focus, .search-guest:focus {
+    outline: none;
+}
+
+::ng-deep .mat-tab-label .mat-tab-label-content {
+    font-size: 16px !important;
+}
 /* End of Meeting invites styles */
-
-
 /* End of Main content styles */
+
+
+/* Responsiveness styles */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* Start of Meeting info styles */
+    .meeting__info {
+        padding-left: 3px;
+    }
+
+    .meetingdatetime__container {
+        margin-left: 10px;
+    }
+
+    .meetingdatetime__container1 {
+        margin-left: 12px;
+    }
+    /* End of Meeting info styles */
+
+    /* Start of Meeting invites styles */
+    .search-participant, .search-guest {
+        width: 465px;
+    }
+
+    .search-icon {
+        margin-left: -30px;
+    }
+    /* End of Meeting invites styles */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Start of Meeting info styles */
+    .meeting__info {
+        padding-left: 55px;
+    }
+
+    .meetingdatetime__container {
+        margin-left: 10px;
+    }
+
+    .meetingdatetime__container1 {
+        margin-left: 10px;
+    }
+    /* End of Meeting info styles */
+
+    /* Start of Meeting invites styles */
+    .search-participant, .search-guest {
+        width: 660px;
+    }
+
+    .search-icon {
+        margin-left: -30px;
+    }
+    /* End of Meeting invites styles */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Start of Meeting info styles */
+    .meeting__info {
+        padding-left: 45px;
+    }
+
+    .label__container, .meet-name {
+        font-size: 22px;
+    }
+
+    .meet-topic, .meet-pword {
+        font-size: 18px;
+    }
+
+    .meet-startdatetime, .meet-enddatetime {
+        width: 270px;
+        font-size: 18px;
+    }
+
+    .meet-occurs, .meet-link, .pword-checkbox {
+        font-size: 20px;
+    }
+
+    .meet-link, .pword-checkbox {
+        font-size: 20px;
+    }
+    /* End of Meeting info styles */
+
+    /* Start of Meeting invites styles */
+    .search-participant, .search-guest {
+        width: 680px;
+        height: 48px;
+        font-size: 20px;
+    }
+
+    .search-icon {
+        margin-top: 10px;
+        font-size: 25px;
+    }
+
+    .select-all {
+        font-size: 18px;
+    }
+
+    .select-participant, .select-guest {
+        font-size: 20px;
+    }
+
+    ::ng-deep .mat-tab-label .mat-tab-label-content {
+        font-size: 20px !important;
+    }
+}

@@ -15,7 +15,7 @@
 
                     <!-- Temporary logo placeholder -->
                     <div class="logo-placeholder-container">
-                        <img src="../../assets/images/flash-logo-temp-removebg-preview.png">
+                        <img src="assets/images/flash-logo-temp-removebg-preview.png">
                     </div>
 
                     <!-- White divider line -->
@@ -58,61 +58,66 @@
                 <div class="maincontent__container">
                     <div class="greeting-text">
                         <h1>Schedule a Meeting</h1>
-                        <button mat-raised-button class="btn-save">SAVE</button>
+                        <button mat-raised-button class="save__button">SAVE</button>
                     </div>
                     <div class="main__content">
                         <!-- Meeting information side -->
-                        <div class="meeting-info">
-                            <div class="meeting-name">
+                        <div class="meetinginfo__container">
+                            <form class="meeting__info">
                                 <input type="text" placeholder="Meet Name" class="meet-name">
-                            </div>
-                            <div class="meeting-topic">
                                 <textarea placeholder="Add a short topic (optional)" class="meet-topic"></textarea>
-                            </div>
-                            <div class="label-meeting-datetime">
-                                <label for="meet-datetime">Meeting Time</label>
-                            </div>
-                            <div class="meeting-datetime">    
-                                <input type="date" class="meet-startdate">
-                                <input type="time" class="meet-starttime">
-                                <span class="meet-startend-divider">to</span>
-                                <input type="date" class="meet-enddate">
-                                <input type="time" class="meet-endtime">
-                            </div>
-                            <div class="label-meeting-occurs">
-                                <label for="meet-occurs">Occurs Every</label>
-                            </div>
-                            <div class="meeting-occurs">
-                                <mat-checkbox class="meet-occurs">Sun</mat-checkbox>
-                                <mat-checkbox class="meet-occurs">Mon</mat-checkbox>
-                                <mat-checkbox class="meet-occurs">Tue</mat-checkbox>
-                                <mat-checkbox class="meet-occurs">Wed</mat-checkbox>
-                                <mat-checkbox class="meet-occurs">Thu</mat-checkbox>
-                                <mat-checkbox class="meet-occurs">Fri</mat-checkbox>
-                                <mat-checkbox class="meet-occurs">Sat</mat-checkbox>
-                            </div>
-                            <div class="label-meeting-link">
-                                <label for="meet-link">Meeting Link</label>
-                            </div>
-                            <div class="meeting-link">
-                                <p class="meet-link">*insert meeting link here*</p>
-                            </div>
-                            <div class="label-meeting-pword">
-                                <label for="meet-pword">Meeting Password (optional)</label>
-                            </div>
-                            <div class="meeting-pword">
-                                <mat-checkbox>Require</mat-checkbox>
-                            </div>
-                            <div id="meetingPword">
-                                <input type="text" placeholder="Meeting Password" class="meet-pword">
-                            </div>
+                                <div class="label__container">
+                                    <label for="meeting-datetime">Meeting Time</label>
+                                </div>
+                                <div class="meetingdatetime__container">
+                                    <input type="datetime-local" placeholder="Start date & time" class="meet-startdatetime">
+                                    <span class="meetdatetime__divider">to</span>
+                                    <input type="datetime-local" placeholder="End date & time" class="meet-enddatetime">
+                                </div>
+                                <div class="meetingdatetime__container1">
+                                    <mat-form-field>
+                                        <input matInput [ngxMatDatetimePicker]="pickerFrom" placeholder="Start date & time">
+                                        <mat-datepicker-toggle matSuffix [for]="$any(pickerFrom)"></mat-datepicker-toggle>
+                                        <ngx-mat-datetime-picker #pickerFrom [enableMeridian]="true"></ngx-mat-datetime-picker>
+                                    </mat-form-field>
+                                    <span class="meetdatetime__divider">to</span>
+                                    <mat-form-field>
+                                        <input matInput [ngxMatDatetimePicker]="pickerTo" placeholder="End date & time">
+                                        <mat-datepicker-toggle matSuffix [for]="$any(pickerTo)"></mat-datepicker-toggle>
+                                        <ngx-mat-datetime-picker #pickerTo [enableMeridian]="true"></ngx-mat-datetime-picker>
+                                    </mat-form-field>
+                                </div>
+                                <label for="meeting-occurs" class="label__container">Occurs Every</label>
+                                <div class="meetingoccurs__container">
+                                    <mat-checkbox class="meet-occurs">Sun</mat-checkbox>
+                                    <mat-checkbox class="meet-occurs">Mon</mat-checkbox>
+                                    <mat-checkbox class="meet-occurs">Tue</mat-checkbox>
+                                    <mat-checkbox class="meet-occurs">Wed</mat-checkbox>
+                                    <mat-checkbox class="meet-occurs">Thu</mat-checkbox>
+                                    <mat-checkbox class="meet-occurs">Fri</mat-checkbox>
+                                    <mat-checkbox class="meet-occurs">Sat</mat-checkbox>
+                                </div>
+                                <label for="meeting-link" class="label__container">Meeting Link</label>
+                                <div class="meetinglink__container">
+                                    <p class="meet-link">*insert meeting link here*</p>
+                                </div>
+                                <label for="meeting-pword" class="label__container">Meeting Password (optional)</label>
+                                <div class="pwordcheckbox__container">
+                                    <mat-checkbox class="pword-checkbox">Require</mat-checkbox>
+                                </div>
+                                <div class="meetingpword__container">
+                                    <input type="text" placeholder="Meeting Password" class="meet-pword">
+                                </div>
+                            </form>
                         </div>
-                        <div class="meeting-invites">
+                        <div class="meeting__invites">
                             <mat-tab-group>
                                 <mat-tab label="Participants" class="participants-tab">
-                                    <div class="searchbox">
-                                        <mat-icon aria-hidden="false" class="search-icon">search</mat-icon>
-                                        <input type="text" placeholder="Search a participant" class="search-participant">
+                                    <div class="searchbox__wrapper">
+                                        <div class="searchbox">
+                                            <input type="text" placeholder="Search a participant" class="search-participant">
+                                            <mat-icon aria-hidden="false" class="search-icon">search</mat-icon>
+                                        </div>
                                     </div>
                                     <div class="select-checkbox">
                                         <mat-checkbox class="select-all">Select all participants</mat-checkbox>
@@ -122,15 +127,17 @@
                                     </div>
                                 </mat-tab>
                                 <mat-tab label="Guests">
-                                    <div class="searchbox">
-                                        <mat-icon aria-hidden="false" class="search-icon">search</mat-icon>
-                                        <input type="text" placeholder="Search a guest" class="search-guest">
+                                    <div class="searchbox__wrapper">
+                                        <div class="searchbox">
+                                            <input type="text" placeholder="Search a guest" class="search-guest">
+                                            <mat-icon class="search-icon">search</mat-icon>
+                                        </div>
                                     </div>
                                     <div class="select-checkbox">
-                                        <mat-checkbox class="select-all">Select all participants</mat-checkbox>
+                                        <mat-checkbox class="select-all">Select all guests</mat-checkbox>
                                     </div>
-                                    <div class="participant-checkbox">
-                                        <mat-checkbox class="select-participant">201810082@gordoncollege.edu.ph</mat-checkbox>
+                                    <div class="guest-checkbox">
+                                        <mat-checkbox class="select-guest">Mr. Juan Dela Cruz</mat-checkbox>
                                     </div>
                                 </mat-tab>
                             </mat-tab-group>
