@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor's Homepage</title>
+</head>
+<body>
+    <div class="main-container">
+        <mat-sidenav-container>
+            <mat-sidenav mode="side" opened>
+                <!-- Content of the sidenav -->
+                <div class="sidenav__content">
+
+                    <!-- Temporary logo placeholder -->
+                    <div class="logo-placeholder-container">
+                        <img src="../../assets/images/flash-logo-temp-removebg-preview.png">
+                    </div>
+
+                    <!-- White divider line -->
+                    <mat-divider></mat-divider>
+
+                    <!-- Sidenav buttons -->
+                    <div class="sidenav__buttons">
+                        <button mat-button class="sidenav__button">
+                            <mat-icon>home</mat-icon>
+                            <span>Home</span>
+                        </button>
+                        <button mat-button class="sidenav__button">
+                            <mat-icon>videocam</mat-icon>
+                            <span>Records</span>
+                        </button>
+                        <button mat-button class="sidenav__button">
+                            <mat-icon>logout</mat-icon>
+                            <span>Logout</span>
+                        </button>
+                    </div>
+                    <!-- End of buttons -->
+
+                    <!-- White divider line -->
+                    <mat-divider></mat-divider>
+                </div>
+            </mat-sidenav>
+
+            <mat-sidenav-content>
+                <!-- Toolbar containing sidenav toggle button -->
+                <mat-toolbar>
+                    <button mat-icon-button (click)="sidenav.toggle()">
+                      <mat-icon>menu</mat-icon>
+                    </button>
+                    <span class="example-spacer"></span>
+                    <button mat-icon-button>
+                      <mat-icon>account_circle</mat-icon>
+                    </button>
+                  </mat-toolbar>
+                
+                <!-- Main content container -->
+                <div class="maincontent__container">
+                   
+                </div>
+            </mat-sidenav-content>
+        </mat-sidenav-container>
+    </div>
+</body>
+</html>
