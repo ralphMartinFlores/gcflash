@@ -65,13 +65,11 @@ mat-toolbar {
 }
 
 .save__button {
-    width: 124px;
-    height: 52px;
     background-color: #0166B3;
     color: #FFF;
-    border-radius: 14px;
-    font-size: 20px;
-    font-weight: 700;
+    font-weight: 800;
+    font-size: 1.125rem;
+    padding: 0 1.5rem;
 }
 
 .main__content {
@@ -82,115 +80,87 @@ mat-toolbar {
     justify-content: center;
 }
 
-
 /* Start of Meeting info styles */
 .meetinginfo__container {
     border: 2px solid #0166B3;
     border-radius: 0.625rem;
-    padding: 0.625rem;
-    flex-grow: 1;
+    flex: 1;
 }
 
 .meeting__info {
-    padding-top: 20px;
-    padding-left: 30px;
-    padding-bottom: 20px;
+    padding: 1rem 3rem;
+    margin: 0 auto;
 }
 
-input[type="text"], input[type="datetime-local"] {
-    padding-left: 15px;
-}
 
 .meet-name {
-    display: flex;
-    width: 543px;
-    height: 62px;
+    padding: 1.25rem;
+    width: 100%;
     font-size: 18px;
     font-weight: 700;
     color: #2F2D2D;
     border: 1px solid #B0B0B0;
     box-sizing: border-box;
     border-radius: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 1rem;
 }
 
 textarea {
-    padding-top: 10px;
-    padding-left: 15px;
+    padding: 1rem;
 }
 
 .meet-topic {
-    width: 543px;
-    height: 106px;
-    font-size: 15px;
+    padding: 1.25rem;
+    width: 100%;
     font-weight: 700;
     color: #2F2D2D;
     border: 1px solid #B0B0B0;
-    box-sizing: border-box;
-    border-radius: 10px;
-    line-height: 22px;
-    margin: 0 auto 20px; /* margin: top, right and left, bottom */
+    border-radius: 0.625rem;
+    line-height: 1.375rem;
+    margin: 0 auto 1rem; /* margin: top, right and left, bottom */
 }
 
 .label__container {
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 1.125rem;
+    font-weight: 800;
     color: #2F2D2D;
-    margin-bottom: 15px;
 }
 
-.meetingdatetime__container {
-    margin-bottom: 25px;
-}
 
 .meetingdatetime__container1 {
-    margin-left: 27px;
+    margin-top: 5px;
 }
 
 .meet-startdatetime, .meet-enddatetime {
-    width: 225px;
-    height: 37px;
-    border-radius: 5px;
+    padding: 1rem;
+    border-radius: 0.313rem;
     border: 1px solid #B0B0B0;
     box-sizing: border-box;
-    font-size: 15px;
 }
 
 .meetdatetime__divider {
-    margin: 0px 30px 0px 30px; /* margin: top, left, bottom, right*/
+    margin: 0px 1.875rem 0px 1.875rem; /* margin: top, left, bottom, right*/
 }
 
-.meetingoccurs__container {
-    margin-top: 15px;
-    margin-bottom: 25px;
+
+.meet_occurs {
+    width: 100%;
 }
 
-.meet-occurs {
-    margin: 0 12px;
-    font-size: 16px;
-    font-weight: 400;
-}
-
-.meet-link {
-    font-size: 16px;
-    font-weight: 400;
-    margin-left: 20px;
-    margin-bottom: 25px;
-}
 
 .pword-checkbox {
-    margin: 10px;
+    margin: 1rem 0;
 }
 
 .meet-pword {
-    width: 543px;
-    height: 50px;
-    font-size: 15px;
-    font-weight: 700;
+    padding: 1rem;
+    width: 100%;
+    font-weight: 800;
+    font-size: 1rem;
     color: #2F2D2D;
     border: 1px solid #B0B0B0;
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 0.625rem;
 }
 
 .meet-name:focus, .meet-topic:focus, .meet-startdatetime:focus, 
@@ -214,45 +184,20 @@ textarea {
 /* Start of Meeting invites styles */
 .meeting__invites {
     padding: 0.625rem;
-    flex-grow: 1;
+    flex: 1;
 }
+
 
 .searchbox {
-    display: flex;
-    margin-top: 10px;
+    width: 100%;
 }
 
-.search-icon {
-    margin-top: 7px;
-    margin-left: -30px;
-}
-
-.search-participant, .search-guest {
-    width: 390px;
-    height: 38px;
-    font-size: 15px;
-    font-weight: 400;
-    background: #D5D5D5;
-    border: 1px solid #B0B0B0;
-    box-sizing: border-box;
-    border-radius: 5px;
-    color: #2F2D2D;
-    margin-left: 10px;
-}
-
-.select-checkbox {
-    margin-top: 20px;
-}
-
-.select-all {
-    padding-left: 20px;
-    font-size: 14px;
-    font-weight: 400;
+.searchbox__container {
+   width: 95%;
 }
 
 .select-participant, .select-guest {
-    padding-left: 20px;
-    margin-top: 20px;
+    margin-top: 1rem;
 }
 
 .search-participant:focus, .search-guest:focus {
@@ -265,112 +210,30 @@ textarea {
 /* End of Meeting invites styles */
 /* End of Main content styles */
 
+/* Responsive styles */
+@media (max-width: 800px) { 
+    .maincontent__container {
+        padding: 1rem;
+    }
 
-/* Responsiveness styles */
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-    /* Start of Meeting info styles */
+    .meetinginfo__container {
+        width: 100%;
+    }
+
     .meeting__info {
-        padding-left: 3px;
+        padding: 1rem;
+        margin: 0 auto;
     }
 
-    .meetingdatetime__container {
-        margin-left: 10px;
+    .save__button {
+        background-color: #0166B3;
+        color: #FFF;
+        font-weight: 800;
+        font-size: 1rem;
+        padding: 0 0.5rem;
     }
 
-    .meetingdatetime__container1 {
-        margin-left: 12px;
-    }
-    /* End of Meeting info styles */
-
-    /* Start of Meeting invites styles */
-    .search-participant, .search-guest {
-        width: 465px;
-    }
-
-    .search-icon {
-        margin-left: -30px;
-    }
-    /* End of Meeting invites styles */
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-    /* Start of Meeting info styles */
-    .meeting__info {
-        padding-left: 55px;
-    }
-
-    .meetingdatetime__container {
-        margin-left: 10px;
-    }
-
-    .meetingdatetime__container1 {
-        margin-left: 10px;
-    }
-    /* End of Meeting info styles */
-
-    /* Start of Meeting invites styles */
-    .search-participant, .search-guest {
-        width: 660px;
-    }
-
-    .search-icon {
-        margin-left: -30px;
-    }
-    /* End of Meeting invites styles */
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-    /* Start of Meeting info styles */
-    .meeting__info {
-        padding-left: 45px;
-    }
-
-    .label__container, .meet-name {
-        font-size: 22px;
-    }
-
-    .meet-topic, .meet-pword {
-        font-size: 18px;
-    }
-
-    .meet-startdatetime, .meet-enddatetime {
-        width: 270px;
-        font-size: 18px;
-    }
-
-    .meet-occurs, .meet-link, .pword-checkbox {
-        font-size: 20px;
-    }
-
-    .meet-link, .pword-checkbox {
-        font-size: 20px;
-    }
-    /* End of Meeting info styles */
-
-    /* Start of Meeting invites styles */
-    .search-participant, .search-guest {
-        width: 680px;
-        height: 48px;
-        font-size: 20px;
-    }
-
-    .search-icon {
-        margin-top: 10px;
-        font-size: 25px;
-    }
-
-    .select-all {
-        font-size: 18px;
-    }
-
-    .select-participant, .select-guest {
-        font-size: 20px;
-    }
-
-    ::ng-deep .mat-tab-label .mat-tab-label-content {
-        font-size: 20px !important;
+    .datetime {
+        width: 100%;
     }
 }

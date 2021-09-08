@@ -23,6 +23,8 @@ import { NgxMatDatetimePickerModule, NgxMatNativeDateModule, NgxMatTimepickerMod
 
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatInputModule,
     NgxMatTimepickerModule,
     NgxMatDatetimePickerModule,
-    NgxMatNativeDateModule
+    NgxMatNativeDateModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
