@@ -9,6 +9,7 @@ import { ProfHomeComponent } from './prof-home/prof-home.component';
 import { ProfMeetingtypeComponent } from './prof-meetingtype/prof-meetingtype.component';
 import { ProfSchedmeetingComponent } from './prof-schedmeeting/prof-schedmeeting.component';
 import { ProfMeetingfullscreenComponent } from './prof-meetingfullscreen/prof-meetingfullscreen.component';
+import { ProfRechistoryComponent } from './prof-rechistory/prof-rechistory.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -16,9 +17,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { NgxMatDatetimePickerModule, NgxMatNativeDateModule, NgxMatTimepickerModule } from '@angular-material-components/datetime-picker';
 
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -27,7 +33,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     ProfHomeComponent,
     ProfMeetingtypeComponent,
     ProfMeetingfullscreenComponent,
-    ProfSchedmeetingComponent
+    ProfSchedmeetingComponent,
+    ProfRechistoryComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +47,14 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatDividerModule,
     MatCardModule,
     MatCheckboxModule,
-    MatTabsModule
+    MatTabsModule,
+    MatDatepickerModule,
+    MatInputModule,
+    NgxMatTimepickerModule,
+    NgxMatDatetimePickerModule,
+    NgxMatNativeDateModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
