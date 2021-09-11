@@ -18,6 +18,10 @@ mat-divider {
 mat-toolbar {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     background-color: #FFF;
+    position: sticky;
+    position: -webkit-sticky; /* For macOS/iOS Safari */
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
 }
 
 .example-spacer {
@@ -48,6 +52,7 @@ mat-toolbar {
 .maincontent__container {
     padding: 2rem;
 }
+
 .greeting-text {
     display: flex;
     justify-content: space-between;
@@ -76,31 +81,34 @@ mat-toolbar {
 
 /* Start of Lesson card styles */
 .lessoncard__container {
-    padding: 0.825rem;
     display: flex;
-    flex-direction: row;
+    gap: 1rem;
+    /* border: 1px solid red; */
+    width: 100%;
 }
 
 .lesson-card {
-    width: 347px;
+    /* width: 347px;
     height: 135px;
-    margin-left: 1rem;
+    margin-left: 1rem; */
+    padding: 2rem;
+    flex-grow: 1;
+    border-left: 5px solid #0166B3;
 }
 
 .lesson {
-    font-size: 23px;
-    font-weight: 700;
+    font-size: 1.438rem;
+    font-weight: 800;
 }
 
 .lesson-desc {
-    font-size: 15px;
-    font-weight: 400;
+    font-size: 1rem;
 }
 /* End of Lesson card styles */
 /* End of Main content styles */
 
 /* Responsive styles */
-@media (max-width: 800px) {
+@media (max-width: 750px) {
     .maincontent__container {
         padding: 1rem;
     }
@@ -109,7 +117,32 @@ mat-toolbar {
         width: 30%;
     }
 
+    /* .lessoncard__container {
+        width: 100%;
+    } */
+
     .lessoncard__container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
         width: 100%;
     }
+
+    .lesson-card {
+        /* width: 347px;
+        height: 135px;
+        margin-left: 1rem; */
+        padding: 2rem;
+        width: 100%;
+    }
+
+    .greeting-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .searchbox {
+        width: 100%;
+    }
+
 }
