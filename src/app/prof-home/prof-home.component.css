@@ -131,11 +131,12 @@ mat-card {
 }
 
 .meetingoption:hover {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    /* box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); */
+    background-color: #0d538a;
 }
 
 .graymeetingoption {
-    background-color: lightgray;
+    background-color: whitesmoke;
     border-radius: 8px;
     padding: 2rem;
     display: flex;
@@ -147,11 +148,14 @@ mat-card {
 }
 
 .graymeetingoption:hover {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    /* box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); */
+    background-color: lightgray;
 }
 
 .meetingoption mat-icon {
     color: white;
+    height: 36px;
+    width: 36px;
     font-size: 36px;
 }
 
@@ -166,6 +170,8 @@ mat-card {
 }
 
 .graymeetingoption mat-icon {
+    height: 36px;
+    width: 36px;
     font-size: 36px;
 }
 
@@ -174,7 +180,8 @@ mat-card {
     text-align: center;
 }
 
-@media (max-width: 800px) { 
+
+@media screen and (max-width: 800px) { 
     .main__content, mat-card, .card__title{
         flex-direction: column;
     }
@@ -185,5 +192,14 @@ mat-card {
 
     .maincontent__container {
         padding: 1rem;
+    }
+
+    .greeting-text > h1 {
+        font-size: 1.5rem;
+    }
+
+    .card__title p {
+        font-size: 1rem;
+        font-weight: 800;
     }
 }

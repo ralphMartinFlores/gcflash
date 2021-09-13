@@ -87,7 +87,11 @@ mat-toolbar {
     padding: 0.625rem;
 }
 
-@media (max-width: 750px) { 
+.meeting-type button:hover {
+    background-color: #0d538a;
+}
+
+@media screen and (max-width: 750px) { 
     .main__content {
         flex-direction: column;
     }
@@ -99,5 +103,13 @@ mat-toolbar {
     .meeting-type img {
         width: 100%;
         height: auto;
+    }
+
+    .greeting-text > h1 {
+        font-size: 1.5rem;
+    }
+
+    .meeting-type button {
+        font-size: 1.125rem;
     }
 }

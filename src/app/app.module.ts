@@ -25,6 +25,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { StudHomeComponent } from './stud-home/stud-home.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MatSelectModule } from '@angular/material/select';
     ProfMeetingtypeComponent,
     ProfMeetingfullscreenComponent,
     ProfSchedmeetingComponent,
-    ProfRechistoryComponent
+    ProfRechistoryComponent,
+    StudHomeComponent
   ],
   imports: [
     BrowserModule,

@@ -108,7 +108,7 @@ mat-toolbar {
 /* End of Main content styles */
 
 /* Responsive styles */
-@media (max-width: 750px) {
+@media screen and (max-width: 750px) {
     .maincontent__container {
         padding: 1rem;
     }
@@ -139,6 +139,11 @@ mat-toolbar {
     .greeting-text {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .greeting-text > h1 {
+        font-size: 1.5rem;
     }
 
     .searchbox {
