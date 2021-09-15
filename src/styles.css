@@ -1,11 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 
+:root {
+    --ff-primary: 'Poppins', sans-serif;
+    --clr-primary-400: #0166B3;
+    --clr-primary-600: #0d538a;
+    --clr-secondary-400: #F5F5F5;
+    --clr-secondary-600: #D3D3D3;
+    --clr-blackhole: #000000;
+    --clr-neutral-400: #FFF;
+    --clr-success-400: #32CD32;
+}
+
 * {
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--ff-primary);
 }
 
 html, body { 
     height: 100%; 
 }
-body { margin: 0; font-family: sans-serif; }
+
+body { margin: 0; font-family: var(--ff-primary) }
+

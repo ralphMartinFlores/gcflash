@@ -23,8 +23,8 @@
 }
 
 .form-container input {
-    background-color: whitesmoke;
-    border: 1px solid whitesmoke;
+    background-color: var(--clr-secondary-400);
+    border: 1px solid var(--clr-secondary-400);;
     border-radius: 3.125rem;
     padding: 1.5rem;
     width: 30rem;
@@ -44,13 +44,13 @@
 
 .forgot-password a{
     text-decoration: none;
-    color: #0166B3;
+    color: var(--clr-primary-400);
     font-weight: 600;
 }
 
 .login-btn {
-    background-color: #0166B3;
-    color: white;
+    background-color: var(--clr-primary-400);;
+    color: var(--clr-neutral-400);
     border-radius: 3.125rem;
     text-align: center;
     font-size: 1.25rem;
@@ -61,8 +61,12 @@
     cursor: pointer;
 }
 
+.login-btn:hover {
+    background-color: var(--clr-primary-600);
+}
+
 .logo-container{
-    position: relative;
+    /* position: relative; */
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -72,8 +76,7 @@
     width: 100%;
 }
 
-
-@media (max-width: 800px) { 
+@media screen and (max-width: 50em) { 
     .main-container {
         display: flex;
         flex-direction: column;

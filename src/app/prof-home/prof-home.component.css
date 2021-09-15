@@ -1,7 +1,7 @@
 /* Sidenav and toolbar styles */
 mat-sidenav {
     width: 200px;
-    background-color: #0166B3;
+    background-color: var(--clr-primary-400);
     color: white;
 }
 
@@ -12,12 +12,12 @@ mat-sidenav-container {
 mat-divider {
     width: 75%;
     margin: 1rem auto;
-    background-color: white;
+    background-color: var(--clr-neutral-400);
 }
 
 mat-toolbar {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    background-color: #FFF;
+    background-color: var(--clr-neutral-400);;
     position: sticky;
     position: -webkit-sticky; /* For macOS/iOS Safari */
     top: 0; /* Sets the sticky toolbar to be on top */
@@ -57,7 +57,7 @@ mat-toolbar {
 }
 
 .greeting-text > h1 {
-    color: #0166B3;
+    color: var(--clr-primary-400);
 }
 
 .main__content {
@@ -76,13 +76,13 @@ mat-toolbar {
 }
 
 .datetime__container {
-    background-color: #0166B3;
+    background-color: var(--clr-primary-400);
     text-align: center;
     padding: 1rem;
 }
 
 .datetime__container p {
-    color: white;
+    color: var(--clr-neutral-400);
 }
 
 .datetime__container p:first-of-type {
@@ -97,6 +97,7 @@ mat-card {
     margin-top: 1rem;
     gap: 1rem;
     cursor: pointer;
+    border-radius: 0.625rem;
 }
 
 .card__title {
@@ -119,7 +120,7 @@ mat-card {
 }
 
 .meetingoption {
-    background-color: #0166B3;
+    background-color: var(--clr-primary-400);
     border-radius: 8px;
     padding: 2rem;
     display: flex;
@@ -132,11 +133,11 @@ mat-card {
 
 .meetingoption:hover {
     /* box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); */
-    background-color: #0d538a;
+    background-color: var(--clr-primary-600);
 }
 
 .graymeetingoption {
-    background-color: whitesmoke;
+    background-color: var(--clr-secondary-400);
     border-radius: 8px;
     padding: 2rem;
     display: flex;
@@ -148,12 +149,11 @@ mat-card {
 }
 
 .graymeetingoption:hover {
-    /* box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); */
-    background-color: lightgray;
+    background-color: var(--clr-secondary-600);
 }
 
 .meetingoption mat-icon {
-    color: white;
+    color: var(--clr-neutral-400);
     height: 36px;
     width: 36px;
     font-size: 36px;
@@ -161,7 +161,7 @@ mat-card {
 
 .meetingoption span {
     font-size: 1.25rem;
-    color: white;
+    color: var(--clr-neutral-400);
     text-align: center;
 }
 
@@ -181,7 +181,7 @@ mat-card {
 }
 
 
-@media screen and (max-width: 800px) { 
+@media screen and (max-width: 50em) { 
     .main__content, mat-card, .card__title{
         flex-direction: column;
     }

@@ -1,7 +1,7 @@
 /* Start of sidenav and toolbar styles */
 mat-sidenav {
     width: 200px;
-    background-color: #0166B3;
+    background-color: var(--clr-primary-400);
     color: white;
 }
 
@@ -12,12 +12,12 @@ mat-sidenav-container {
 mat-divider {
     width: 75%;
     margin: 1rem auto;
-    background-color: white;
+    background-color: var(--clr-neutral-400);
 }
 
 mat-toolbar {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    background-color: #FFF;
+    background-color: var(--clr-neutral-400);
     position: sticky;
     position: -webkit-sticky; /* For macOS/iOS Safari */
     top: 0; /* Sets the sticky toolbar to be on top */
@@ -64,11 +64,13 @@ mat-toolbar {
 }
 
 .greeting-text > h1 {
-    color: #0166B3;
+    color: var(--clr-primary-400);
 }
+
 
 .searchbox {
     width: 35%;
+    margin-top: 1rem;
 }
 
 .main__content {
@@ -93,7 +95,7 @@ mat-toolbar {
     margin-left: 1rem; */
     padding: 2rem;
     flex-grow: 1;
-    border-left: 5px solid #0166B3;
+    border-left: 5px solid var(--clr-primary-400);
 }
 
 .lesson {
@@ -108,7 +110,7 @@ mat-toolbar {
 /* End of Main content styles */
 
 /* Responsive styles */
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 46.875em) {
     .maincontent__container {
         padding: 1rem;
     }

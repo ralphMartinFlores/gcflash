@@ -1,8 +1,8 @@
 /* Start of sidenav and toolbar styles */
 mat-sidenav {
     width: 200px;
-    background-color: #0166B3;
-    color: white;
+    background-color: var(--clr-primary-400);
+    color: var(--clr-neutral-400);
 }
 
 mat-sidenav-container {
@@ -12,12 +12,12 @@ mat-sidenav-container {
 mat-divider {
     width: 75%;
     margin: 1rem auto;
-    background-color: white;
+    background-color: var(--clr-neutral-400);;
 }
 
 mat-toolbar {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    background-color: #FFF;
+    background-color: var(--clr-neutral-400);
     position: sticky;
     position: -webkit-sticky; /* For macOS/iOS Safari */
     top: 0; /* Sets the sticky toolbar to be on top */
@@ -60,20 +60,20 @@ mat-toolbar {
 }
 
 .greeting-text > h1 {
-    color: #0166B3;
+    color: var(--clr-primary-400);
     margin: 0;
 }
 
 .save__button {
-    background-color: #0166B3;
-    color: #FFF;
+    background-color: var(--clr-primary-400);
+    color: var(--clr-neutral-400);
     font-weight: 800;
     font-size: 1.125rem;
     padding: 0 1.5rem;
 }
 
 .save__button:hover {
-    background-color: #0d538a;
+    background-color: var(--clr-primary-600);
 }
 
 .main__content {
@@ -86,7 +86,7 @@ mat-toolbar {
 
 /* Start of Meeting info styles */
 .meetinginfo__container {
-    border: 2px solid #0166B3;
+    border: 2px solid var(--clr-primary-400);
     border-radius: 0.625rem;
     flex: 1;
 }
@@ -175,12 +175,12 @@ textarea {
 ::ng-deep .mat-checkbox-checked .mat-checkbox-background, 
 .mat-checkbox-indeterminate .mat-checkbox-background {
     /* overwrites the checkbox background */
-    background-color: #0166B3 !important;
+    background-color: var(--clr-primary-400) !important;
 }
 
 ::ng-deep .mat-checkbox:not(.mat-checkbox-disabled) .mat-checkbox-ripple .mat-ripple-element {
     /* overwrites the ripple overlay on hover and click */
-    background-color: #0166B3 !important;
+    background-color: var(--clr-primary-400) !important;
 }
 /* End of Meeting info styles */
 
@@ -216,7 +216,7 @@ textarea {
 /* End of Main content styles */
 
 /* Responsive styles */
-@media screen and (max-width: 800px) { 
+@media screen and (max-width: 50em) { 
     .maincontent__container {
         padding: 1rem;
     }
@@ -231,8 +231,8 @@ textarea {
     }
 
     .save__button {
-        background-color: #0166B3;
-        color: #FFF;
+        background-color: var(--clr-primary-400);
+        color: var(--clr-neutral-400);
         font-weight: 800;
         font-size: 1rem;
         padding: 0 0.5rem;

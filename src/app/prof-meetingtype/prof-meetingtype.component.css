@@ -1,7 +1,7 @@
 /* Sidenav and toolbar styles */
 mat-sidenav {
     width: 200px;
-    background-color: #0166B3;
+    background-color: var(--clr-primary-400);
     color: white;
 }
 
@@ -12,12 +12,12 @@ mat-sidenav-container {
 mat-divider {
     width: 75%;
     margin: 1rem auto;
-    background-color: white;
+    background-color: var(--clr-neutral-400);
 }
 
 mat-toolbar {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    background-color: #FFF;
+    background-color: var(--clr-neutral-400);
     position: sticky;
     position: -webkit-sticky; /* For macOS/iOS Safari */
     top: 0; /* Sets the sticky toolbar to be on top */
@@ -53,7 +53,7 @@ mat-toolbar {
 }
 
 .greeting-text > h1 {
-    color: #0166B3;
+    color: var(--clr-primary-400);
     margin: 0;
 }
 
@@ -66,7 +66,7 @@ mat-toolbar {
 }
 
 .meeting-type {
-    border: 2px solid #0166B3;
+    border: 2px solid var(--clr-primary-400);
     border-radius: 0.625rem;
     padding: 0.625rem;
     text-align: center;
@@ -78,7 +78,7 @@ mat-toolbar {
 }
 
 .meeting-type button {
-    background-color: #0166B3;
+    background-color: var(--clr-primary-400);
     color: white;
     border-radius: 0.625rem;
     font-size: 1.25rem;
@@ -88,10 +88,10 @@ mat-toolbar {
 }
 
 .meeting-type button:hover {
-    background-color: #0d538a;
+    background-color: var(--clr-primary-600);
 }
 
-@media screen and (max-width: 750px) { 
+@media screen and (max-width: 46.875em) { 
     .main__content {
         flex-direction: column;
     }
@@ -101,7 +101,7 @@ mat-toolbar {
     }
 
     .meeting-type img {
-        width: 100%;
+        max-width: 100%;
         height: auto;
     }
 
