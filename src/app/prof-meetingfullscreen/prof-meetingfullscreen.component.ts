@@ -5,6 +5,10 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 import { delay } from 'rxjs/operators';
 import { debounce } from 'lodash';
 
+declare var Area: any;
+declare var Dish: any;
+declare var setWidth: any;
+
 @Component({
   selector: 'app-prof-meetingfullscreen',
   templateUrl: './prof-meetingfullscreen.component.html',
@@ -22,6 +26,9 @@ export class ProfMeetingfullscreenComponent implements OnInit {
   }
 
   ngAfterViewInit() {
+    new Area();
+    new Dish();
+    new setWidth();
     // Observes for breakpoint changes and changes sidenav mode to be more responsive
     this.observer
       .observe(['(max-width: 800px)'])
@@ -37,7 +44,6 @@ export class ProfMeetingfullscreenComponent implements OnInit {
       });
       this.layout();
   }
-
 
     //For layout of every video tiles
     recalculateLayout() {
@@ -108,6 +114,7 @@ export class ProfMeetingfullscreenComponent implements OnInit {
     window.addEventListener("resize", calcLayout);
     calcLayout();
   }
+  
 
 
 }
