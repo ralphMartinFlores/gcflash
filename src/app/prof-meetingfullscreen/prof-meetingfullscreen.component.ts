@@ -5,29 +5,27 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 import { delay } from 'rxjs/operators';
 import { debounce } from 'lodash';
 
-declare var Area: any;
-declare var Dish: any;
-declare var setWidth: any;
-
 @Component({
   selector: 'app-prof-meetingfullscreen',
   templateUrl: './prof-meetingfullscreen.component.html',
   styleUrls: ['./prof-meetingfullscreen.component.css']
 })
-export class ProfMeetingfullscreenComponent implements OnInit {
+export class ProfMeetingfullscreenComponent implements OnInit{
 
-    // Variables needed for a responsive sidenav
-    @ViewChild(MatSidenav)
-    sidenav!: MatSidenav;
-  
-    constructor(private observer: BreakpointObserver) { }
+  // Variables needed for a responsive sidenav
+  @ViewChild(MatSidenav)
+  sidenav!: MatSidenav;
 
-  ngOnInit(): void {
-  }
+  constructor(private observer: BreakpointObserver) { }
 
-  ngAfterViewInit() {
+  // ngOnInit(): void {
+  //   this.Dish();
+  //   window.onresize = this.Dish;
+  // }
+
+  ngOnInit() {
     this.Dish(); // calling the function of dish
-    window.onresize = Dish; // used window.onresize method = if the window has been changed by it size, the dish must be functioning..
+    window.onresize = this.Dish; // used window.onresize method = if the window has been changed by it size, the dish must be functioning..
     // new Area();
     // new Dish();
     // new setWidth();
@@ -39,9 +37,13 @@ export class ProfMeetingfullscreenComponent implements OnInit {
         if (res.matches) {
           this.sidenav.mode = 'over';
           this.sidenav.close();
+          this.Dish();
+          window.onresize = this.Dish;
         } else {
           this.sidenav.mode = 'side';
           this.sidenav.open();
+          this.Dish();
+          window.onresize = this.Dish;
         }
       });
       this.layout();
@@ -136,7 +138,7 @@ export class ProfMeetingfullscreenComponent implements OnInit {
 
   Dish() {
     // variables:
-        let Margin : any = 2;
+        let Margin : any = 1.5;
         let Scenary : any = (<HTMLSelectElement>document.getElementById('Dish')); // getting the div id 'Dish' from HTML..
         let Width = Scenary.offsetWidth - (Margin * 2);
         let Height = Scenary.offsetHeight - (Margin * 2);
@@ -165,10 +167,10 @@ export class ProfMeetingfullscreenComponent implements OnInit {
         camera[s].style.width = width + "px";
         camera[s].style.margin = margin + "px";
         camera[s].style.height = (width * 0.75) + "px";
+        console.log(camera[s].style.width)
+        console.log(camera[s].style.margin)
+        console.log(camera[s].style.height)
     }
 }
-
-
-
 }
 
