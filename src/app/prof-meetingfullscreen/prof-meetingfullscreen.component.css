@@ -52,14 +52,6 @@ mat-toolbar {
     padding: 0.5rem;
 }
 
-/* .main__content{
-    height: 100%;
-} */
-
-.video-container video {
-    width: 100%;
-    height: auto;
-}
 /* Container */
 #Dish {
     display: flex;
@@ -74,6 +66,8 @@ mat-toolbar {
     top: 0px;
     right: 0px;
 }
+
+
 /* Camera */
 .Camera {
     position: relative;
