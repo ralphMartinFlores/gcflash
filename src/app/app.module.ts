@@ -26,6 +26,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { StudHomeComponent } from './stud-home/stud-home.component';
+import { MeetingComponent } from './meeting/meeting.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { StudHomeComponent } from './stud-home/stud-home.component';
     ProfMeetingfullscreenComponent,
     ProfSchedmeetingComponent,
     ProfRechistoryComponent,
-    StudHomeComponent
+    StudHomeComponent,
+    MeetingComponent
   ],
   imports: [
     BrowserModule,

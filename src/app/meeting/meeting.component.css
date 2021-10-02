@@ -1,0 +1,208 @@
+/* Sidenav and toolbar styles */
+mat-sidenav {
+    width: 200px;
+    background-color: var(--clr-primary-400);
+    color: white;
+}
+
+mat-sidenav-container {
+    height: 100vh;
+}
+
+mat-divider {
+    width: 75%;
+    margin: 1rem auto;
+    background-color: var(--clr-neutral-400);
+}
+
+mat-toolbar {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: var(--clr-neutral-400);;
+    position: sticky;
+    position: -webkit-sticky; /* For macOS/iOS Safari */
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.logo-placeholder-container  img {
+    width: 100%;
+    height: auto;
+}
+
+.sidenav__button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.sidenav__button mat-icon {
+    margin-right: 1rem;
+}
+
+/* End of sidenav and toolbar styles */
+
+.maincontent__container {
+    padding: 1rem;
+}
+
+.main__content {
+    /* border: 1px solid green; */
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    background-color: var(--clr-secondary-400);
+    border-radius: 10px;
+}
+
+.videocall__container {
+    max-width: 70%;
+    /* border: 1px solid blue; */
+    flex-grow: 1;
+}
+
+.chatbox__container {
+    max-width: 30%;
+    flex-grow: 1;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.vcalldetails__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.participants, .invite-button {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+.invite-button button {
+    font-size: 1.125rem;
+    font-weight: 800;
+    background-color: var(--clr-primary-400);
+    color: white;
+    border-radius: 0.625rem;
+    padding: 0.625rem 1rem;
+}
+
+.invite-button button:hover {
+    background-color: var(--clr-primary-600);
+}
+
+
+.vcalldetails-icon {
+    height: 32px;
+    width: 32px;
+    font-size: 32px;
+}
+
+.videotiles__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.313rem;
+    margin-top: 1rem;
+}
+
+.video-tile {
+    width: 49%;
+    flex: 1 1 auto;
+    border-radius: 10px;
+    border: 2px solid var(--clr-primary-400);
+}
+
+.Camera {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    border-radius: 10px;
+    object-fit: fill;
+}
+
+.videocall_buttons {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.videocall_buttons button {
+    background: var(--clr-secondary-600);
+}
+
+.videocall_buttons button:hover {
+    background: var(--clr-secondary-800);
+}
+
+.danger-button {
+    background-color: var(--clr-danger-400) !important;
+    color: white;
+    font-weight: 800;
+}
+
+.danger-button:hover {
+    background-color: var(--clr-danger-600) !important;
+}
+
+.meeting__name h2 {
+    margin: 0;
+}
+
+.chatbox h2 {
+    margin-top: 0;
+}
+
+.message__container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 10px;
+}
+
+.message__container p {
+    margin: 0;
+}
+
+.participant-name {
+    font-size: 1.125rem;
+    font-weight: 800;
+}
+
+@media screen and (max-width: 800px) { 
+    .main__content, .vcalldetails__container {
+        flex-direction: column;
+    }
+
+    .videocall__container, .chatbox__container {
+        max-width: 100%;
+    }
+
+    .videocall_buttons {
+        flex-wrap: wrap;
+    }
+    
+    .participants {
+        justify-content: space-between;
+    }
+
+    .invite-button button {
+        width: 100%;
+    }
+
+    .main__content, .videocall_buttons {
+        padding: 0;
+    }
+
+    .videocall_buttons {
+        margin-top: 1rem;
+    }
+}

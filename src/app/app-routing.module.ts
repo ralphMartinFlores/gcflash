@@ -7,6 +7,7 @@ import { ProfMeetingtypeComponent } from './prof-meetingtype/prof-meetingtype.co
 import { ProfSchedmeetingComponent } from './prof-schedmeeting/prof-schedmeeting.component';
 import { ProfRechistoryComponent } from './prof-rechistory/prof-rechistory.component';
 import { StudHomeComponent } from './stud-home/stud-home.component';
+import { MeetingComponent } from './meeting/meeting.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'prof-meetingfullscreen', component: ProfMeetingfullscreenComponent },
   { path: 'prof-schedmeeting', component: ProfSchedmeetingComponent },
   { path: 'prof-rechistory', component: ProfRechistoryComponent },
-  { path: 'stud-home', component: StudHomeComponent }
+  { path: 'stud-home', component: StudHomeComponent },
+  { path: 'meeting', component: MeetingComponent }
 ];
 
 @NgModule({
