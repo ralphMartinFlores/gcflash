@@ -8,6 +8,8 @@ import { ProfSchedmeetingComponent } from './prof-schedmeeting/prof-schedmeeting
 import { ProfRechistoryComponent } from './prof-rechistory/prof-rechistory.component';
 import { StudHomeComponent } from './stud-home/stud-home.component';
 import { MeetingComponent } from './meeting/meeting.component';
+import { StudProfileComponent } from './stud-profile/stud-profile.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -17,7 +19,9 @@ const routes: Routes = [
   { path: 'prof-schedmeeting', component: ProfSchedmeetingComponent },
   { path: 'prof-rechistory', component: ProfRechistoryComponent },
   { path: 'stud-home', component: StudHomeComponent },
-  { path: 'meeting', component: MeetingComponent }
+  { path: 'meeting', component: MeetingComponent },
+  { path: 'stud-profile', component: StudProfileComponent },
+  { path: 'forgot-password', component: ForgotPasswordComponent }
 ];
 
 @NgModule({

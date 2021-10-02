@@ -27,6 +27,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { StudHomeComponent } from './stud-home/stud-home.component';
 import { MeetingComponent } from './meeting/meeting.component';
+import { StudProfileComponent } from './stud-profile/stud-profile.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { MeetingComponent } from './meeting/meeting.component';
     ProfSchedmeetingComponent,
     ProfRechistoryComponent,
     StudHomeComponent,
-    MeetingComponent
+    MeetingComponent,
+    StudProfileComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
