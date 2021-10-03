@@ -18,7 +18,22 @@
             <video class="Camera" src="https://dosant.github.io/video.mp4"></video>
         </div>  
         <div class="action-bar">
-            <div class="av-controls">
+            <div class="videocall_buttons">
+                <button mat-flat-button>
+                    <mat-icon>fullscreen_exit</mat-icon>
+                </button>
+                 <button mat-flat-button>
+                    <mat-icon>videocam_off</mat-icon>
+                </button>
+                <button mat-flat-button class="danger-button">End Call</button>
+                <button mat-flat-button>
+                    <mat-icon>mic_off</mat-icon>
+                </button>
+                <button mat-flat-button>
+                    <mat-icon>screen_share</mat-icon>
+                </button>
+            </div>
+            <!-- <div class="av-controls">
                 <ul class="list-inline">
                     <li>
                         <span class="fa">12: 41 PM | </span>
@@ -53,7 +68,7 @@
                         <i class="fa fa-user" aria-hidden="true"></i>
                     </li>
                 </ul>
-            </div>
+            </div> -->
         </div>  
     </div>
 </body>
