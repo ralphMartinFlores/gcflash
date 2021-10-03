@@ -56,44 +56,57 @@
                 </mat-toolbar>
 
                 <div class="maincontent__container">
+                    <div class="wickedbackground">
+                        <p>Student's Profile</p>
+                    </div>
                     <div class="main__content">
-                        <div class="studinfo__container">
+                        <mat-card class="studinfo__container mat-elevation-z4">
                             <div class="stud__info">
                                 <img src="assets/images/Ellipse.png" alt="Student Image" class="stud__img">
                                 <h3 class="stud__name">John Morris Doe, Jr.</h3>
                                 <p class="dept__course">CCS/BSIT</p>
                             </div>
-                        </div>
-                        <div class="profile__info">
-                            <h3>Personal Information</h3>
-                            <div class="divider"></div>
-                            <div class="form-container">
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td><mat-label>Email</mat-label></td>
-                                            <td><input type="text" disabled></td>
-                                        </tr>
-                                        <tr>
-                                            <td><mat-label>Student ID</mat-label></td>
-                                            <td><input type="text" disabled></td>
-                                        </tr>
-                                        <tr>
-                                            <td><mat-label>Department</mat-label></td>
-                                            <td><input type="text" disabled></td>
-                                        </tr>
-                                        <tr>
-                                            <td><mat-label>Program/Block</mat-label></td>
-                                            <td><input type="text" disabled></td>
-                                        </tr>
-                                        <tr>
-                                            <td><mat-label>Sex</mat-label></td>
-                                            <td><input type="text" disabled></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                        </mat-card>
+                        <mat-card class="profile__info mat-elevation-z4">
+                            <div class="profile">
+                                <h3>Personal Information</h3>
+                                <div class="divider"></div>
+                                <div class="userinfo__container">
+                                    <p>Email</p>
+                                    <div class="user__info">
+                                        2xxxxxxxx@gordoncollege.edu.ph
+                                    </div>
+                                </div>
+
+                                <div class="userinfo__container">
+                                    <p>Student ID</p>
+                                    <div class="user__info">
+                                        2xxxxxxxx
+                                    </div>
+                                </div>
+
+                                <div class="userinfo__container">
+                                    <p>Department</p>
+                                    <div class="user__info">
+                                        CCS
+                                    </div>
+                                </div>
+
+                                <div class="userinfo__container">
+                                    <p>Program/Block</p>
+                                    <div class="user__info">
+                                        BSIT 4A
+                                    </div>
+                                </div>
+
+                                <div class="userinfo__container">
+                                    <p>Sex</p>
+                                    <div class="user__info">
+                                        Male
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        </mat-card>
                     </div>
                 </div>
             </mat-sidenav-content>

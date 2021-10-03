@@ -55,39 +55,40 @@ mat-toolbar {
 .main__content {
     display: flex;
     gap: 1rem;
-    margin-top: 1rem;
-    flex-direction: row;
+    /* margin-top: 1rem; */
     justify-content: center;
 }
 
 .stud__info {
-    padding: 9rem 0 3rem 7rem;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .studinfo__container {
-    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    border-radius: 0.625rem;
 }
 
-.stud__img {
-    width: 45%;
-    height: auto;
-}
 
 .stud__name {
-    font-size: 20px;
-    line-height: 5px;
+    font-size: 1.25rem;
+    margin-bottom: 0;
 }
 
 .dept__course {
-    font-size: 14px;
-    line-height: 5px;
-    margin-left: 3.5rem;
+    font-size: 0.875rem;
+    margin: 0;
 }
 
 .profile__info {
-    padding: 0.625rem;
-    flex: 1;
+    padding: 1rem;
+    border-radius: 0.625rem;
+    width: 50%;
 }
 
 .divider {
@@ -96,22 +97,74 @@ mat-toolbar {
     padding: 1rem;
 }
 
-.form-container input {
-    background-color: #dedede;
-    border: 1px solid var(--clr-secondary-400);;
-    border-radius: 5px;
-    width: 22.563rem;
-    height: 2.5rem;
-    padding: 1.5rem;
-    letter-spacing: 0.031rem;
+.userinfo__container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
 }
 
-table {
-    border-spacing: 10px;
-}
-
-mat-label {
-    margin-right: 1.875rem;
-    font-size: 1rem;
+.userinfo__container p {
+    flex: 1;
+    margin: 0;
     font-weight: 800;
+}
+
+.user__info {
+    padding: 0.5rem;
+    background-color: var(--clr-secondary-400);
+    border-radius: 10px;
+    flex: 1;
+}
+
+.wickedbackground {
+    background-image: url('../../assets/images/wickedbackground.png');
+    padding: 2rem;
+    background-repeat: no-repeat;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 0.625rem;
+    margin-bottom: 1rem;
+}
+
+.wickedbackground p {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--clr-neutral-400);
+}
+
+/* Responsive stylings */
+
+@media screen and (max-width: 50em) { 
+    
+    .maincontent__container {
+        padding: 1rem;
+    }
+
+    .main__content {
+        flex-direction: column;
+    }
+
+    .studinfo__container, .profile__info {
+        width: 100%;
+    }
+
+    .user__info {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 0.875rem;
+    }
+
+    .userinfo__container p {
+        font-size: 0.875rem;
+    }
+
+    .wickedbackground {
+        padding: 1rem;
+    }
+
+    .wickedbackground p {
+        font-size: 1.125rem;
+    }
 }

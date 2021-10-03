@@ -67,10 +67,14 @@ mat-toolbar {
     flex-grow: 1;
 }
 
+.meeting__name h2 {
+    color: var(--clr-primary-400);
+}
+
 .chatbox__container {
     max-width: 30%;
     flex-grow: 1;
-    border: 2px solid gray;
+    border: 2px solid var(--clr-primary-400);
     border-radius: 10px;
     padding: 1rem;
 }
