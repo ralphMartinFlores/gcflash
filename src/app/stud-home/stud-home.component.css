@@ -138,8 +138,7 @@ mat-card {
 }
 
 .upcoming__container {
-    height: fit-content;
-    height: -moz-fit-content;
+    height: max-content;
 }
 
 .upcoming__container > mat-card {
@@ -160,6 +159,7 @@ mat-card {
     font-weight: 800;
     width: 100%;
     padding: 0.625rem;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
 .meetingtype-btn button:hover {
@@ -170,6 +170,7 @@ mat-card {
 
     .maincontent__container {
         padding: 1rem;
+        height: 0;
     }
 
     .main__content {
@@ -191,5 +192,13 @@ mat-card {
 
     .meetingtype-btn button {
         font-size: 1.125rem;
+    }
+
+    .ongoing__container {
+        order: 2;
+    }
+
+    .upcoming__container {
+        order: 1;
     }
 }
