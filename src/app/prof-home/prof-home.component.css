@@ -34,12 +34,18 @@ mat-toolbar {
 }
 
 .sidenav__button {
-    width: 100%;
+    width: 98%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 1rem;
+    padding: 0.625rem;
     font-size: 1rem;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.active {
+    background-color: var(--clr-primary-800);
 }
 
 .sidenav__button mat-icon {
