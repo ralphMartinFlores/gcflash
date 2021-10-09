@@ -5,8 +5,8 @@
     --clr-primary-400: #0166B3;
     --clr-primary-600: #015ca1;
     --clr-primary-800: #01528f;
-    --clr-secondary-400: #F5F5F5;
-    --clr-secondary-600: #DDDDDD;
+    --clr-secondary-400: #f3f4f6;
+    --clr-secondary-600: #dbdcdd;
     --clr-secondary-800: #c7c7c7;
     --clr-blackhole: #000000;
     --clr-neutral-400: #FFF;
@@ -14,6 +14,7 @@
     --clr-danger-400: #EE4B2B;
     --clr-danger-600: #a7351e;
 }
+
 
 * {
     box-sizing: border-box;
@@ -28,4 +29,3 @@ body {
     margin: 0; 
     font-family: var(--ff-primary);
 }
-

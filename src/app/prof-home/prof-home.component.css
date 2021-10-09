@@ -40,8 +40,8 @@ mat-toolbar {
     justify-content: flex-start;
     padding: 0.625rem;
     font-size: 1rem;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
 }
 
 .active {

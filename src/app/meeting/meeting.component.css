@@ -34,12 +34,18 @@ mat-toolbar {
 }
 
 .sidenav__button {
-    width: 100%;
+    width: 98%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 1rem;
+    padding: 0.625rem;
     font-size: 1rem;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.active {
+    background-color: var(--clr-primary-800);
 }
 
 .sidenav__button mat-icon {
@@ -204,8 +210,12 @@ mat-toolbar {
         width: 100%;
     }
 
-    .main__content, .videocall_buttons {
+    .videocall_buttons {
         padding: 0;
+    }
+
+    .main__content {
+        padding: 0.5rem;
     }
 
     .videocall_buttons {
