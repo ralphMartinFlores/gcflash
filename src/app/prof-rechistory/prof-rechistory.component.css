@@ -24,6 +24,7 @@ mat-toolbar {
     z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
 }
 
+
 .example-spacer {
     flex: 1 1 auto;
 }
@@ -73,7 +74,6 @@ mat-toolbar {
     color: var(--clr-primary-400);
 }
 
-
 .searchbox {
     width: 35%;
     margin-top: 1rem;
@@ -112,6 +112,7 @@ mat-toolbar {
 .lesson-desc {
     font-size: 1rem;
 }
+
 /* End of Lesson card styles */
 /* End of Main content styles */
 

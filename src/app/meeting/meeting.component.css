@@ -136,8 +136,8 @@ mat-toolbar {
     max-width: 100%;
     height: auto;
     vertical-align: bottom;
-    border-radius: 10px;
     object-fit: fill;
+    border-radius: 10px;
 }
 
 .videocall_buttons {
@@ -220,5 +220,15 @@ mat-toolbar {
 
     .videocall_buttons {
         margin-top: 1rem;
+    }
+
+    .video-tile {
+        aspect-ratio: 1;
+        display: grid;
+        place-items: center;
+    }
+
+    .Camera {
+        border-radius: 0;
     }
 }

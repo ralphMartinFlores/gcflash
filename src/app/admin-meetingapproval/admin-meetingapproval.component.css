@@ -1,0 +1,149 @@
+/* Sidenav and toolbar styles */
+mat-sidenav {
+    width: 75px;
+    background-color: var(--clr-primary-400);
+    color: var(--clr-neutral-400);
+}
+
+mat-sidenav-container {
+    height: 100vh;
+}
+
+mat-toolbar {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: var(--clr-neutral-400);;
+    position: sticky;
+    position: -webkit-sticky; /* For macOS/iOS Safari */
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.sidenav__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.sidenav__buttons button:hover {
+    background-color: var(--clr-primary-600);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.active {
+    background-color: var(--clr-primary-800);
+}
+
+.colored-icon {
+    color: var(--clr-primary-400);
+}
+
+mat-toolbar > button:hover {
+    background-color: var(--clr-secondary-600);
+}
+
+/* End of sidenav and toolbar styles */
+
+/* Main content styles */
+.colored__container {
+    background-color: var(--clr-secondary-400);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.maincontent__container {
+    padding: 2rem;
+    /* background-color: var(--clr-secondary-400); */
+}
+
+.greeting__actualtext > * {
+    margin: 0;
+}
+
+.greeting__actualtext h1 {
+    color: var(--clr-primary-400);
+}
+
+.meeting__text > * {
+    margin: 0;
+}
+
+.meeting__text p:first-of-type {
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.main__content {
+    display: flex;
+    gap: 1rem;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.illustration img {
+    max-width: 100%;
+    height: auto;
+    mix-blend-mode: multiply;
+}
+
+.illustration, .meetings__container {
+    flex: 1;
+}
+
+mat-card {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.approval__buttons button:first-of-type {
+    background-color: var(--clr-secondary-600);
+    margin-right: 10px;
+}
+
+.approval__buttons button:last-of-type {
+    background-color: var(--clr-success-600);
+}
+
+.approval__buttons mat-icon {
+    color: var(--clr-neutral-400);
+}
+
+@media screen and (max-width: 50em) { 
+    .maincontent__container {
+        padding: 1rem;
+    }
+
+    .main__content {
+        flex-direction: column;
+    }
+
+    .approval__buttons {
+        display: flex;
+        gap: 5px;
+    }
+
+    .approval__buttons button:first-of-type {
+        margin-right: 0;
+    }
+
+    .greeting__actualtext h1 {
+        font-size: 1.5rem;
+    }
+
+    .meeting__text p:first-of-type {
+        font-size: 1.125rem;
+    }
+
+    mat-card {
+        gap: 10px;
+    }
+}

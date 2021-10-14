@@ -1,18 +1,12 @@
 /* Sidenav and toolbar styles */
 mat-sidenav {
-    width: 200px;
+    width: 75px;
     background-color: var(--clr-primary-400);
     color: var(--clr-neutral-400);
 }
 
 mat-sidenav-container {
     height: 100vh;
-}
-
-mat-divider {
-    width: 75%;
-    margin: 1rem auto;
-    background-color: var(--clr-neutral-400);
 }
 
 mat-toolbar {
@@ -28,28 +22,30 @@ mat-toolbar {
     flex: 1 1 auto;
 }
 
-.logo-placeholder-container  img {
-    width: 100%;
-    height: auto;
+.sidenav__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
-.sidenav__button {
-    width: 98%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0.625rem;
-    font-size: 1rem;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
+.sidenav__buttons button:hover {
+    background-color: var(--clr-primary-600);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
 .active {
     background-color: var(--clr-primary-800);
 }
 
-.sidenav__button mat-icon {
-    margin-right: 1rem;
+.colored-icon {
+    color: var(--clr-primary-400);
+}
+
+mat-toolbar > button:hover {
+    background-color: var(--clr-secondary-600);
 }
 
 /* End of sidenav and toolbar styles */
@@ -58,11 +54,30 @@ mat-toolbar {
     padding: 2rem;
 }
 
-.greeting-text h1, p {
+.greeting-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.greeting-text button {
+    background-color: var(--clr-primary-400);
+    color: var(--clr-neutral-400);
+    font-size: 1.125rem;
+    font-weight: 800;
+    padding: 10px 1.5rem;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.greeting-text button:hover {
+    background-color: var(--clr-primary-600);
+}
+
+.greeting__actualtext h1, p {
     margin: 0;
 }
 
-.greeting-text > h1 {
+.greeting__actualtext > h1 {
     color: var(--clr-primary-400);
 }
 
@@ -205,8 +220,18 @@ mat-card {
         padding: 1rem;
     }
 
-    .greeting-text > h1 {
+    .greeting__actualtext > h1 {
         font-size: 1.5rem;
+    }
+
+    .greeting-text {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .greeting-text button {
+        width: 100%;
     }
 
     .card__title p {

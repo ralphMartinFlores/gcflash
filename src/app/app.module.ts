@@ -29,6 +29,9 @@ import { StudHomeComponent } from './stud-home/stud-home.component';
 import { MeetingComponent } from './meeting/meeting.component';
 import { StudProfileComponent } from './stud-profile/stud-profile.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { SharescreenComponent } from './sharescreen/sharescreen.component';
+import { AdminHomeComponent } from './admin-home/admin-home.component';
+import { AdminMeetingapprovalComponent } from './admin-meetingapproval/admin-meetingapproval.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     StudHomeComponent,
     MeetingComponent,
     StudProfileComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    SharescreenComponent,
+    AdminHomeComponent,
+    AdminMeetingapprovalComponent
   ],
   imports: [
     BrowserModule,
