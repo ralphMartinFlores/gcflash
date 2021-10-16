@@ -34,10 +34,6 @@
     object-fit: fill;
 }
 
-.Camera:hover{
-    border: 2px solid #fff;
-}
-
 .videocall_buttons {
     display: flex;
     justify-content: center;
@@ -67,7 +63,6 @@
     background-color: var(--clr-danger-600) !important;
 }
 
-/* Action-bar */
 .action-bar {
     display: flex;
     justify-content: center;

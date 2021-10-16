@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Rechistory</title>
+</head>
+<body>
+    <div class="main-container">
+        <mat-sidenav-container>
+            <mat-sidenav mode="side" opened>
+                <!-- Content of the sidenav -->
+                <div class="sidenav__content">
+
+                    <!-- Temporary logo placeholder -->
+                    <div class="logo-placeholder-container">
+                        <img src="assets/images/flash-logo-temp-removebg-preview.png">
+                    </div>
+
+                    <!-- White divider line -->
+                    <mat-divider></mat-divider>
+
+                    <!-- Sidenav buttons -->
+                    <div class="sidenav__buttons">
+                        <button mat-button class="sidenav__button">
+                            <mat-icon>home</mat-icon>
+                            <span>Home</span>
+                        </button>
+                        <button mat-button class="sidenav__button active">
+                            <mat-icon>videocam</mat-icon>
+                            <span>Records</span>
+                        </button>
+                        <button mat-button class="sidenav__button">
+                            <mat-icon>logout</mat-icon>
+                            <span>Logout</span>
+                        </button>
+                    </div>
+                    <!-- End of buttons -->
+
+                    <!-- White divider line -->
+                    <mat-divider></mat-divider>
+                </div>
+            </mat-sidenav>
+
+            <mat-sidenav-content>
+                <!-- Toolbar containing sidenav toggle button -->
+                <mat-toolbar>
+                    <button mat-icon-button (click)="sidenav.toggle()">
+                      <mat-icon>menu</mat-icon>
+                    </button>
+                    <span class="example-spacer"></span>
+                    <button mat-icon-button>
+                      <mat-icon>account_circle</mat-icon>
+                    </button>
+                </mat-toolbar>
+
+                <div class="maincontent__container">
+                    <div class="greeting-text">
+                        <div class="title__text">
+                            <h1>IT Elective 5</h1>
+                            <p>Records History</p>
+                        </div>
+                        <mat-form-field appearance="outline" class="searchbox">
+                            <mat-label>Search</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="main__content">
+                        <div class="lessoncard__container">
+                            <mat-card class="mat-elevation-z4 lesson-card">
+                                <mat-card-title class="lesson">Lesson 1</mat-card-title>
+                                <mat-card-content class="lesson-desc">Lorem ipsum dolor sit amet</mat-card-content>
+                            </mat-card>
+                            <mat-card class="mat-elevation-z4 lesson-card">
+                                <mat-card-title class="lesson">Lesson 2</mat-card-title>
+                                <mat-card-content class="lesson-desc">Lorem ipsum dolor sit amet</mat-card-content>
+                            </mat-card>
+                            <mat-card class="mat-elevation-z4 lesson-card">
+                                <mat-card-title class="lesson">Lesson 3</mat-card-title>
+                                <mat-card-content class="lesson-desc">Lorem ipsum dolor sit amet</mat-card-content>
+                            </mat-card>
+                        </div>
+                        <div class="lessoncard__container">
+                            <mat-card class="mat-elevation-z4 lesson-card">
+                                <mat-card-title class="lesson">Lesson 4</mat-card-title>
+                                <mat-card-content class="lesson-desc">Lorem ipsum dolor sit amet</mat-card-content>
+                            </mat-card>
+                            <mat-card class="mat-elevation-z4 lesson-card">
+                                <mat-card-title class="lesson">Lesson 5</mat-card-title>
+                                <mat-card-content class="lesson-desc">Lorem ipsum dolor sit amet</mat-card-content>
+                            </mat-card>
+                            <mat-card class="mat-elevation-z4 lesson-card">
+                                <mat-card-title class="lesson">Lesson 6</mat-card-title>
+                                <mat-card-content class="lesson-desc">Lorem ipsum dolor sit amet</mat-card-content>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </mat-sidenav-content>
+        </mat-sidenav-container>
+    </div>
+</body>
+</html>

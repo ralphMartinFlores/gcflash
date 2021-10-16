@@ -51,100 +51,71 @@ mat-toolbar > button:hover {
 /* End of sidenav and toolbar styles */
 
 /* Main content styles */
-.colored__container {
-    background-color: var(--clr-secondary-400);
-    padding: 1rem;
-    border-radius: 10px;
-}
-
 .maincontent__container {
     padding: 2rem;
 }
 
-.greeting__actualtext > * {
-    margin: 0;
-}
-
-.greeting__actualtext h1 {
+.greeting-text > h1 {
     color: var(--clr-primary-400);
-}
-
-.meeting__text > * {
     margin: 0;
-}
-
-.meeting__text p:first-of-type {
-    font-size: 1.25rem;
-    font-weight: 800;
 }
 
 .main__content {
     display: flex;
     gap: 1rem;
-    margin-top: 10px;
-    align-items: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.illustration img {
-    max-width: 100%;
-    height: auto;
-    mix-blend-mode: multiply;
+.meeting-type {
+    border: 2px solid var(--clr-primary-400);
+    border-radius: 0.625rem;
+    padding: 0.625rem;
+    text-align: center;
+    aspect-ratio: 4 / 3;
 }
 
-.illustration, .meetings__container {
-    flex: 1;
+.meeting-type img {
+    width: 250px;
 }
 
-mat-card {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-    border-radius: 10px;
-    align-items: center;
+.meeting-type button {
+    background-color: var(--clr-primary-400);
+    color: white;
+    border-radius: 0.625rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    width: 100%;
+    padding: 0.625rem;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
-.approval__buttons button:first-of-type {
-    background-color: var(--clr-secondary-600);
-    margin-right: 10px;
-}
-
-.approval__buttons button:last-of-type {
-    background-color: var(--clr-success-600);
-}
-
-.approval__buttons mat-icon {
-    color: var(--clr-neutral-400);
+.meeting-type button:hover {
+    background-color: var(--clr-primary-600);
 }
 
 /* Responsive styles */
 
-@media screen and (max-width: 50em) { 
-    .maincontent__container {
-        padding: 1rem;
-    }
-
+@media screen and (max-width: 46.875em) { 
     .main__content {
         flex-direction: column;
     }
 
-    .approval__buttons {
-        display: flex;
-        gap: 5px;
+    .maincontent__container {
+        padding: 1rem;
     }
 
-    .approval__buttons button:first-of-type {
-        margin-right: 0;
+    .meeting-type img {
+        max-width: 100%;
+        height: auto;
     }
 
-    .greeting__actualtext h1 {
+    .greeting-text > h1 {
         font-size: 1.5rem;
     }
 
-    .meeting__text p:first-of-type {
+    .meeting-type button {
         font-size: 1.125rem;
-    }
-
-    mat-card {
-        gap: 10px;
     }
 }

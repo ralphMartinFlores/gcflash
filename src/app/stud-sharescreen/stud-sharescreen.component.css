@@ -1,0 +1,123 @@
+.main-container {
+    padding: 1.5rem;
+}
+
+.mainsharescreen__container {
+    display: flex;
+    gap: 1rem;
+    background-color: var(--clr-secondary-400);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.main-sharescreen {
+    flex: 70%;
+    aspect-ratio: 16 / 9;
+    display: grid;
+    place-items: center;
+}
+
+.main-sharescreen video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.participants__container {
+    display: flex;
+    flex: 30%;
+    gap: 0.625rem;
+    flex-wrap: wrap;
+}
+
+.participant {
+    border-radius: 10px;
+    flex: 1 1 200px;
+    display: grid;
+    place-items: center;
+    border: 2px solid var(--clr-primary-400);
+    aspect-ratio: 4 / 3;
+}
+
+.participant > video {
+    max-width: 100%;
+    height: auto;
+}
+
+.videocall_buttons {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    gap: 10px;
+    background-color: var(--clr-secondary-400);
+    border-radius: 10px;
+    width: fit-content;
+    margin: 10px auto;
+}
+
+.videocall_buttons button {
+    background: var(--clr-secondary-600);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.videocall_buttons button:hover {
+    background: var(--clr-secondary-800);
+}
+
+.danger-button {
+    background-color: var(--clr-danger-400) !important;
+    color: var(--clr-neutral-400);
+    font-weight: 800;
+}
+
+.danger-button:hover {
+    background-color: var(--clr-danger-600) !important;
+}
+
+/* Responsive styles */
+
+@media screen and (max-width: 50em) { 
+
+    .main-container {
+        padding: 10px;
+    }
+
+    .mainsharescreen__container {
+        flex-direction: column;
+    }
+
+    .participant {
+        flex: 1 0 150px;
+        aspect-ratio: 1;
+    }
+
+    .videocall_buttons {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 22.5em) { 
+
+    .main-container {
+        padding: 10px;
+    }
+
+    .mainsharescreen__container {
+        flex-direction: column;
+    }
+
+    .participant {
+        flex: 1 0 100px;
+        aspect-ratio: 1;
+    }
+
+    .videocall_buttons {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 64em) { 
+    .mainsharescreen__container {
+        flex-direction: column;
+    }
+}

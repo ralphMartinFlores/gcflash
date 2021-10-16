@@ -13,6 +13,15 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { SharescreenComponent } from './sharescreen/sharescreen.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { AdminMeetingapprovalComponent } from './admin-meetingapproval/admin-meetingapproval.component';
+import { AdminChoosemeetingtypeComponent } from './admin-choosemeetingtype/admin-choosemeetingtype.component';
+import { AdminSchedmeetingComponent } from './admin-schedmeeting/admin-schedmeeting.component';
+import { AdminManagemeetingsComponent } from './admin-managemeetings/admin-managemeetings.component';
+import { AdminMeetingfullscreenComponent } from './admin-meetingfullscreen/admin-meetingfullscreen.component';
+import { AdminSharescreenComponent } from './admin-sharescreen/admin-sharescreen.component';
+import { StudRechistoryComponent } from './stud-rechistory/stud-rechistory.component';
+import { StudMeetingComponent } from './stud-meeting/stud-meeting.component';
+import { StudMeetingfullscreenComponent } from './stud-meetingfullscreen/stud-meetingfullscreen.component';
+import { StudSharescreenComponent } from './stud-sharescreen/stud-sharescreen.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -27,7 +36,16 @@ const routes: Routes = [
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'sharescreen', component: SharescreenComponent },
   { path: 'admin-home', component: AdminHomeComponent },
-  { path: 'admin-meetingapproval', component: AdminMeetingapprovalComponent }
+  { path: 'admin-meetingapproval', component: AdminMeetingapprovalComponent },
+  { path: 'admin-choosemeetingtype', component: AdminChoosemeetingtypeComponent },
+  { path: 'admin-schedmeeting', component: AdminSchedmeetingComponent },
+  { path: 'admin-managemeeting', component: AdminManagemeetingsComponent },
+  { path: 'admin-meetingfullscreen', component: AdminMeetingfullscreenComponent },
+  { path: 'admin-sharescreen', component: AdminSharescreenComponent },
+  { path: 'stud-rechistory', component: StudRechistoryComponent },
+  { path: 'stud-meeting', component: StudMeetingComponent },
+  { path: 'stud-meetingfullscreen', component: StudMeetingfullscreenComponent },
+  { path: 'stud-sharescreen', component: StudSharescreenComponent }
 ];
 
 @NgModule({

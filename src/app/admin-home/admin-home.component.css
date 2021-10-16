@@ -50,6 +50,8 @@ mat-toolbar > button:hover {
 
 /* End of sidenav and toolbar styles */
 
+/* Main content styles */
+
 .maincontent__container {
     padding: 2rem;
 }
@@ -85,7 +87,6 @@ mat-toolbar > button:hover {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
-    /* border: 1px solid red; */
 }
 
 .meetings__container {
@@ -206,6 +207,7 @@ mat-card {
     text-align: center;
 }
 
+/* Responsive styles */
 
 @media screen and (max-width: 50em) { 
     .main__content, mat-card, .card__title{

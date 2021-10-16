@@ -50,101 +50,98 @@ mat-toolbar > button:hover {
 
 /* End of sidenav and toolbar styles */
 
-/* Main content styles */
-.colored__container {
-    background-color: var(--clr-secondary-400);
-    padding: 1rem;
-    border-radius: 10px;
-}
 
+/* Main content styles */
 .maincontent__container {
     padding: 2rem;
 }
 
-.greeting__actualtext > * {
+.greeting-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.greeting-text h1, p {
     margin: 0;
 }
 
-.greeting__actualtext h1 {
+.greeting-text > h1 {
     color: var(--clr-primary-400);
 }
 
-.meeting__text > * {
-    margin: 0;
-}
-
-.meeting__text p:first-of-type {
-    font-size: 1.25rem;
-    font-weight: 800;
+.searchbox {
+    width: 35%;
+    margin-top: 1rem;
 }
 
 .main__content {
     display: flex;
     gap: 1rem;
-    margin-top: 10px;
-    align-items: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.illustration img {
-    max-width: 100%;
-    height: auto;
-    mix-blend-mode: multiply;
-}
-
-.illustration, .meetings__container {
-    flex: 1;
-}
-
-mat-card {
+/* Start of Lesson card styles */
+.lessoncard__container {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-    border-radius: 10px;
-    align-items: center;
+    gap: 1rem;
+    width: 100%;
 }
 
-.approval__buttons button:first-of-type {
-    background-color: var(--clr-secondary-600);
-    margin-right: 10px;
+.lesson-card {
+    padding: 2rem;
+    flex-grow: 1;
+    border-left: 5px solid var(--clr-success-600);
 }
 
-.approval__buttons button:last-of-type {
-    background-color: var(--clr-success-600);
+.lesson {
+    font-size: 1.438rem;
+    font-weight: 800;
 }
 
-.approval__buttons mat-icon {
-    color: var(--clr-neutral-400);
+.lesson-desc {
+    font-size: 1rem;
 }
+
+/* End of Lesson card styles */
+/* End of Main content styles */
 
 /* Responsive styles */
-
-@media screen and (max-width: 50em) { 
+@media screen and (max-width: 46.875em) {
     .maincontent__container {
         padding: 1rem;
     }
 
-    .main__content {
-        flex-direction: column;
+    .searchbox {
+        width: 30%;
     }
 
-    .approval__buttons {
+    .lessoncard__container {
         display: flex;
-        gap: 5px;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
     }
 
-    .approval__buttons button:first-of-type {
-        margin-right: 0;
+    .lesson-card {
+        padding: 2rem;
+        width: 100%;
     }
 
-    .greeting__actualtext h1 {
+    .greeting-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .greeting-text > h1 {
         font-size: 1.5rem;
     }
 
-    .meeting__text p:first-of-type {
-        font-size: 1.125rem;
+    .searchbox {
+        width: 100%;
     }
 
-    mat-card {
-        gap: 10px;
-    }
 }

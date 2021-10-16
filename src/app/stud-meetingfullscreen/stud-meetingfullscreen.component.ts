@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
-
 @Component({
-  selector: 'app-prof-meetingfullscreen',
-  templateUrl: './prof-meetingfullscreen.component.html',
-  styleUrls: ['./prof-meetingfullscreen.component.css']
+  selector: 'app-stud-meetingfullscreen',
+  templateUrl: './stud-meetingfullscreen.component.html',
+  styleUrls: ['./stud-meetingfullscreen.component.css']
 })
-export class ProfMeetingfullscreenComponent implements OnInit{
+export class StudMeetingfullscreenComponent implements OnInit {
 
   constructor() { }
 
@@ -19,8 +18,6 @@ export class ProfMeetingfullscreenComponent implements OnInit{
     // Run dish function at first page load
     this.Dish();
   }
-
-  
 
   //Script JS
   Area(increment: any, count : any, width : any, height : any, margin : any = 10) { // Counts the area of height and width dynamically..
@@ -73,6 +70,6 @@ export class ProfMeetingfullscreenComponent implements OnInit{
         console.log(camera[s].style.margin)
         console.log(camera[s].style.height)
     }
-}
-}
+  }
 
+}

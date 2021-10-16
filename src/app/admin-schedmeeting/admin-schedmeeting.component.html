@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Schedule Meeting</title>
+</head>
+<body>
+    <div class="main-container">
+        <mat-sidenav-container>
+            <mat-sidenav mode="side" opened>
+                <!-- Content of the sidenav -->
+                <div class="sidenav__content">
+                    <!-- Sidenav buttons -->
+                    <div class="sidenav__buttons">
+                        <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                            <mat-icon>home</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                            <mat-icon>videocam</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                            <mat-icon>groups</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                            <mat-icon>history</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                            <mat-icon>logout</mat-icon>
+                        </button>
+                    </div>
+                    <!-- End of buttons -->
+
+                </div>
+            </mat-sidenav>
+
+            <mat-sidenav-content>
+                <!-- Toolbar containing sidenav toggle button -->
+                <mat-toolbar>
+                    <button mat-icon-button (click)="sidenav.toggle()">
+                      <mat-icon>menu</mat-icon>
+                    </button>
+                    <span class="example-spacer"></span>
+                    <button mat-icon-button>
+                        <mat-icon class="colored-icon">notifications</mat-icon>
+                    </button>
+                    <button mat-icon-button>
+                      <mat-icon class="colored-icon">account_circle</mat-icon>
+                    </button>
+                  </mat-toolbar>
+                
+                <!-- Main content container -->
+                <div class="maincontent__container">
+                    <div class="greeting-text">
+                        <h1>Schedule a Meeting</h1>
+                        <button mat-flat-button class="save__button">SAVE</button>
+                    </div>
+                    <div class="main__content">
+                        <!-- Meeting information side -->
+                        <div class="meetinginfo__container">
+                            <form class="meeting__info">
+                                <input type="text" placeholder="Meet Name" class="meet-name">
+                                <textarea placeholder="Add a short topic (optional)" class="meet-topic"></textarea>
+                                <div class="label__container">
+                                    <label for="meeting-datetime">Meeting Time</label>
+                                </div>
+                                <div class="meetingdatetime__container1">
+                                    <mat-form-field class="datetime">
+                                        <input matInput [ngxMatDatetimePicker]="pickerFrom" placeholder="Start date & time">
+                                        <mat-datepicker-toggle matSuffix [for]="$any(pickerFrom)"></mat-datepicker-toggle>
+                                        <ngx-mat-datetime-picker #pickerFrom [enableMeridian]="true"></ngx-mat-datetime-picker>
+                                    </mat-form-field>
+                                    <span class="meetdatetime__divider">to</span>
+                                    <mat-form-field class="datetime">
+                                        <input matInput [ngxMatDatetimePicker]="pickerTo" placeholder="End date & time">
+                                        <mat-datepicker-toggle matSuffix [for]="$any(pickerTo)"></mat-datepicker-toggle>
+                                        <ngx-mat-datetime-picker #pickerTo [enableMeridian]="true"></ngx-mat-datetime-picker>
+                                    </mat-form-field>
+                                </div>
+                                <label for="meeting-occurs" class="label__container">Occurs Every</label>
+                                <div class="meetingoccurs__container">
+                                    <mat-form-field appearance="standard" class="meet_occurs">
+                                        <mat-label>Select Days</mat-label>
+                                        <mat-select multiple>
+                                          <mat-option>Sunday</mat-option>
+                                          <mat-option>Monday</mat-option>
+                                          <mat-option>Tuesday</mat-option>
+                                          <mat-option>Wednesday</mat-option>
+                                          <mat-option>Thursday</mat-option>
+                                          <mat-option>Friday</mat-option>
+                                          <mat-option>Saturday</mat-option>
+                                        </mat-select>
+                                      </mat-form-field>
+                                      
+                                </div>
+                                <label for="meeting-link" class="label__container">Meeting Link</label>
+                                <div class="meetinglink__container">
+                                    <p class="meet-link">*insert meeting link here*</p>
+                                </div>
+                                <label for="meeting-pword" class="label__container">Meeting Password (optional)</label>
+                                <div class="pwordcheckbox__container">
+                                    <mat-checkbox class="pword-checkbox">Require</mat-checkbox>
+                                </div>
+                                <div class="meetingpword__container">
+                                    <input type="password" placeholder="Meeting Password" class="meet-pword">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="meeting__invites">
+                            <mat-tab-group>
+                                <mat-tab label="Participants" class="participants-tab">
+                                    
+                                    <div class="searchbox__container">
+                                        <mat-form-field appearance="standard" class="searchbox">
+                                            <mat-label>Search for a participant</mat-label>
+                                            <input matInput>
+                                        </mat-form-field>
+                                    </div>
+
+                                    <div class="select-checkbox">
+                                        <mat-checkbox class="select-all">Select all participants</mat-checkbox>
+                                    </div>
+                                    <div class="participant-checkbox">
+                                        <mat-checkbox class="select-participant">201810082@gordoncollege.edu.ph</mat-checkbox>
+                                    </div>
+                                </mat-tab>
+                                <mat-tab label="Guests">
+
+                                    <div class="searchbox__container">
+                                        <mat-form-field appearance="standard" class="searchbox">
+                                            <mat-label>Search for a guest</mat-label>
+                                            <input matInput>
+                                        </mat-form-field>
+                                    </div>
+
+                                    <div class="select-checkbox">
+                                        <mat-checkbox class="select-all">Select all guests</mat-checkbox>
+                                    </div>
+                                    <div class="guest-checkbox">
+                                        <mat-checkbox class="select-guest">Mr. Juan Dela Cruz</mat-checkbox>
+                                    </div>
+                                </mat-tab>
+                            </mat-tab-group>
+                        </div>
+                    </div>
+                </div>
+            </mat-sidenav-content>
+        </mat-sidenav-container>
+    </div>
+</body>
+</html>

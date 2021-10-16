@@ -32,6 +32,15 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { SharescreenComponent } from './sharescreen/sharescreen.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { AdminMeetingapprovalComponent } from './admin-meetingapproval/admin-meetingapproval.component';
+import { AdminChoosemeetingtypeComponent } from './admin-choosemeetingtype/admin-choosemeetingtype.component';
+import { AdminSchedmeetingComponent } from './admin-schedmeeting/admin-schedmeeting.component';
+import { AdminManagemeetingsComponent } from './admin-managemeetings/admin-managemeetings.component';
+import { AdminMeetingfullscreenComponent } from './admin-meetingfullscreen/admin-meetingfullscreen.component';
+import { AdminSharescreenComponent } from './admin-sharescreen/admin-sharescreen.component';
+import { StudRechistoryComponent } from './stud-rechistory/stud-rechistory.component';
+import { StudMeetingComponent } from './stud-meeting/stud-meeting.component';
+import { StudMeetingfullscreenComponent } from './stud-meetingfullscreen/stud-meetingfullscreen.component';
+import { StudSharescreenComponent } from './stud-sharescreen/stud-sharescreen.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +57,16 @@ import { AdminMeetingapprovalComponent } from './admin-meetingapproval/admin-mee
     ForgotPasswordComponent,
     SharescreenComponent,
     AdminHomeComponent,
-    AdminMeetingapprovalComponent
+    AdminMeetingapprovalComponent,
+    AdminChoosemeetingtypeComponent,
+    AdminSchedmeetingComponent,
+    AdminManagemeetingsComponent,
+    AdminMeetingfullscreenComponent,
+    AdminSharescreenComponent,
+    StudRechistoryComponent,
+    StudMeetingComponent,
+    StudMeetingfullscreenComponent,
+    StudSharescreenComponent
   ],
   imports: [
     BrowserModule,

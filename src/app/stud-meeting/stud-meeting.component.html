@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-container">
+        <mat-sidenav-container>
+            <mat-sidenav mode="side" opened>
+                <!-- Content of the sidenav -->
+                <div class="sidenav__content">
+
+                    <!-- Temporary logo placeholder -->
+                    <div class="logo-placeholder-container">
+                        <img src="../../assets/images/flash-logo-temp-removebg-preview.png">
+                    </div>
+
+                    <!-- White divider line -->
+                    <mat-divider></mat-divider>
+
+                    <!-- Sidenav buttons -->
+                    <div class="sidenav__buttons">
+                        <button mat-button class="sidenav__button">
+                            <mat-icon>home</mat-icon>
+                            <span>Home</span>
+                        </button>
+                        <button mat-button class="sidenav__button">
+                            <mat-icon>videocam</mat-icon>
+                            <span>Records</span>
+                        </button>
+                        <button mat-button class="sidenav__button">
+                            <mat-icon>logout</mat-icon>
+                            <span>Logout</span>
+                        </button>
+                    </div>
+                    <!-- End of buttons -->
+
+                    <!-- White divider line -->
+                    <mat-divider></mat-divider>
+                </div>
+            </mat-sidenav>
+
+            <mat-sidenav-content>
+                <!-- Toolbar containing sidenav toggle button -->
+                <mat-toolbar>
+                    <button mat-icon-button (click)="sidenav.toggle()">
+                      <mat-icon>menu</mat-icon>
+                    </button>
+                    <span class="example-spacer"></span>
+                    <button mat-icon-button>
+                      <mat-icon>account_circle</mat-icon>
+                    </button>
+                  </mat-toolbar>
+                
+                <!-- Main content container -->
+                <div class="maincontent__container">
+                    <div class="main__content">
+                        <div class="videocall__container">
+                            <div class="meeting__name">
+                                <h2>Dio Brando's Meeting - Game Development</h2>
+                            </div>
+                            <div class="vcalldetails__container">
+                                <div class="participants">
+                                    <mat-icon class="vcalldetails-icon">groups</mat-icon>
+                                    <h3>Participants: 24</h3>
+                                </div>
+                                <div class="invite-button">
+                                    <button mat-flat-button>
+                                        <mat-icon class="vcalldetails-icon">add_circle</mat-icon>
+                                        Invite to call
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="videotiles__container">
+                                <div class="video-tile">
+                                    <video muted autoplay loop class="Camera" src="../../assets/images/samplevideo.m4v"></video>
+                                </div>
+                                <div class="video-tile">
+                                    <video muted autoplay loop class="Camera" src="../../assets/images/samplevideo.m4v"></video>
+                                </div>
+                                <div class="video-tile">
+                                    <video muted autoplay loop class="Camera" src="../../assets/images/samplevideo.m4v"></video>
+                                </div>
+                                <div class="video-tile">
+                                    <video muted autoplay loop class="Camera" src="../../assets/images/samplevideo.m4v"></video>
+                                </div>
+                            </div>
+                            <div class="videocall_buttons">
+                                <button mat-flat-button>
+                                    <mat-icon>fullscreen</mat-icon>
+                                </button>
+                                 <button mat-flat-button>
+                                    <mat-icon>videocam_off</mat-icon>
+                                </button>
+                                <button mat-flat-button class="danger-button">End Call</button>
+                                <button mat-flat-button>
+                                    <mat-icon>mic_off</mat-icon>
+                                </button>
+                                <button mat-flat-button>
+                                    <mat-icon>screen_share</mat-icon>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="chatbox__container">
+                            <div class="chatbox">
+                                <h2>Chat</h2>
+                                <div class="chatbox__outline">
+                                    <div class="message__container">
+                                        <mat-icon>account_circle</mat-icon>
+                                        <div class="usermessage">
+                                            <p class="participant-name">John Doe</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium blanditiis nostrum nihil facere debitis aut.</p>
+                                        </div>
+                                    </div>
+                                    <div class="message__container">
+                                        <mat-icon>account_circle</mat-icon>
+                                        <div class="usermessage">
+                                            <p class="participant-name">John Doe</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium blanditiis nostrum nihil facere debitis aut.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </mat-sidenav-content>
+        </mat-sidenav-container>
+    </div>
+</body>
+</html>

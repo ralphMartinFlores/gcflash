@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Choose Meeting Type</title>
+</head>
+<body>
+    <div class="main-container">
+        <mat-sidenav-container>
+            <mat-sidenav mode="side" opened>
+                <!-- Content of the sidenav -->
+                <div class="sidenav__content">
+                    <!-- Sidenav buttons -->
+                    <div class="sidenav__buttons">
+                        <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                            <mat-icon>home</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                            <mat-icon>videocam</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                            <mat-icon>groups</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                            <mat-icon>history</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                            <mat-icon>logout</mat-icon>
+                        </button>
+                    </div>
+                    <!-- End of buttons -->
+
+                </div>
+            </mat-sidenav>
+
+            <mat-sidenav-content>
+                <!-- Toolbar containing sidenav toggle button -->
+                <mat-toolbar>
+                    <button mat-icon-button (click)="sidenav.toggle()">
+                      <mat-icon>menu</mat-icon>
+                    </button>
+                    <span class="example-spacer"></span>
+                    <button mat-icon-button>
+                        <mat-icon class="colored-icon">notifications</mat-icon>
+                    </button>
+                    <button mat-icon-button>
+                      <mat-icon class="colored-icon">account_circle</mat-icon>
+                    </button>
+                  </mat-toolbar>
+                
+                <!-- Main content container -->
+                <div class="maincontent__container">
+                    <div class="greeting-text">
+                        <h1>Choose Meeting Type</h1>
+                    </div>
+                    <div class="main__content">
+                        <!-- Meeting type options -->
+                        <div class="meeting-type">
+                            <img src="../../assets/images/faculty-meeting.png">
+                            <div class="meetingtype-btn">
+                                <button mat-flat-button>Faculty</button>
+                            </div>
+                        </div>
+                        <div class="meeting-type">
+                            <img src="../../assets/images/admin-meeting.png">
+                            <div class="meetingtype-btn">
+                                <button mat-flat-button>Admin</button>
+                            </div>
+                        </div>
+                        <div class="meeting-type">
+                            <img src="../../assets/images/webinar-meeting.png">
+                            <div class="meetingtype-btn">
+                                <button mat-flat-button>Webinar</button>
+                            </div>
+                        </div>
+                        <!-- End of meeting type options -->
+                    </div>
+                </div>
+            </mat-sidenav-content>
+        </mat-sidenav-container>
+    </div>
+</body>
+</html>
