@@ -28,5 +28,5 @@ html, body {
 
 body { 
     margin: 0; 
-    font-family: var(--ff-primary);
+    /* font-family: var(--ff-primary); */
 }
