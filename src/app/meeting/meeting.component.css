@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 /* Sidenav and toolbar styles */
 mat-sidenav {
     width: 200px;
@@ -16,7 +23,8 @@ mat-divider {
 }
 
 mat-toolbar {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     background-color: var(--clr-neutral-400);;
     position: sticky;
     position: -webkit-sticky; /* For macOS/iOS Safari */
@@ -25,7 +33,9 @@ mat-toolbar {
 }
 
 .example-spacer {
-    flex: 1 1 auto;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
 }
 
 .logo-placeholder-container  img {
@@ -35,9 +45,15 @@ mat-toolbar {
 
 .sidenav__button {
     width: 98%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     padding: 0.625rem;
     font-size: 1rem;
     border-top-right-radius: 40px;
@@ -61,6 +77,8 @@ mat-toolbar {
 .main__content {
     /* border: 1px solid green; */
     padding: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 1rem;
     background-color: var(--clr-secondary-400);
@@ -70,7 +88,9 @@ mat-toolbar {
 .videocall__container {
     max-width: 70%;
     /* border: 1px solid blue; */
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
 }
 
 .meeting__name h2 {
@@ -79,21 +99,31 @@ mat-toolbar {
 
 .chatbox__container {
     max-width: 30%;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     border: 2px solid var(--clr-primary-400);
     border-radius: 10px;
     padding: 1rem;
 }
 
 .vcalldetails__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .participants, .invite-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 1rem;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 
@@ -104,6 +134,8 @@ mat-toolbar {
     color: white;
     border-radius: 0.625rem;
     padding: 0.625rem 1rem;
+    -webkit-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    -o-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
@@ -119,15 +151,20 @@ mat-toolbar {
 }
 
 .videotiles__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     gap: 0.313rem;
     margin-top: 1rem;
 }
 
 .video-tile {
     width: 49%;
-    flex: 1 1 auto;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
     border-radius: 10px;
     border: 2px solid var(--clr-primary-400);
 }
@@ -136,20 +173,30 @@ mat-toolbar {
     max-width: 100%;
     height: auto;
     vertical-align: bottom;
-    object-fit: fill;
+    -o-object-fit: fill;
+       object-fit: fill;
     border-radius: 10px;
 }
 
 .videocall_buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 1rem;
     gap: 1rem;
+    margin-top: 10px;
 }
 
 .videocall_buttons button {
     background: var(--clr-secondary-600);
+    -webkit-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    -o-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    -ms-flex-item-align: end;
+        align-self: flex-end;
 }
 
 .videocall_buttons button:hover {
@@ -175,6 +222,8 @@ mat-toolbar {
 }
 
 .message__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 1rem;
     margin-bottom: 10px;
@@ -191,7 +240,10 @@ mat-toolbar {
 
 @media screen and (max-width: 800px) { 
     .main__content, .vcalldetails__container {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
     .videocall__container, .chatbox__container {
@@ -199,11 +251,14 @@ mat-toolbar {
     }
 
     .videocall_buttons {
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     }
     
     .participants {
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
 
     .invite-button button {
@@ -224,6 +279,7 @@ mat-toolbar {
 
     .video-tile {
         aspect-ratio: 1;
+        display: -ms-grid;
         display: grid;
         place-items: center;
     }
