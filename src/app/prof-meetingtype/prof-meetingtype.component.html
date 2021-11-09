@@ -23,15 +23,15 @@
 
                     <!-- Sidenav buttons -->
                     <div class="sidenav__buttons">
-                        <button mat-button class="sidenav__button">
+                        <button mat-button class="sidenav__button active" routerLink="/prof-home">
                             <mat-icon>home</mat-icon>
                             <span>Home</span>
                         </button>
-                        <button mat-button class="sidenav__button">
+                        <button mat-button class="sidenav__button" routerLink="/prof-rechistory">
                             <mat-icon>videocam</mat-icon>
                             <span>Records</span>
                         </button>
-                        <button mat-button class="sidenav__button">
+                        <button mat-button class="sidenav__button"  routerLink="/">
                             <mat-icon>logout</mat-icon>
                             <span>Logout</span>
                         </button>
@@ -65,25 +65,25 @@
                         <div class="meeting-type">
                             <img src="../../assets/images/faculty-meeting.png">
                             <div class="meetingtype-btn">
-                                <button mat-flat-button>Faculty</button>
+                                <button mat-flat-button routerLink="/prof-schedmeeting">Faculty</button>
                             </div>
                         </div>
                         <div class="meeting-type">
                             <img src="../../assets/images/class-meeting.png">
                             <div class="meetingtype-btn">
-                                <button mat-flat-button>Class</button>
+                                <button mat-flat-button routerLink="/prof-schedmeeting">Class</button>
                             </div>
                         </div>
                         <div class="meeting-type">
                             <img src="../../assets/images/admin-meeting.png">
                             <div class="meetingtype-btn">
-                                <button mat-flat-button>Admin</button>
+                                <button mat-flat-button routerLink="/prof-schedmeeting">Admin</button>
                             </div>
                         </div>
                         <div class="meeting-type">
                             <img src="../../assets/images/webinar-meeting.png">
                             <div class="meetingtype-btn">
-                                <button mat-flat-button>Webinar</button>
+                                <button mat-flat-button routerLink="/prof-schedmeeting">Webinar</button>
                             </div>
                         </div>
                         <!-- End of meeting type options -->

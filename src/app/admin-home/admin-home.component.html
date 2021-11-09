@@ -14,19 +14,19 @@
                 <div class="sidenav__content">
                     <!-- Sidenav buttons -->
                     <div class="sidenav__buttons">
-                        <button mat-icon-button matTooltip="Go to home" matTooltipPosition="right">
+                        <button mat-icon-button matTooltip="Go to home" matTooltipPosition="right" routerLink="/admin-home">
                             <mat-icon>home</mat-icon>
                         </button>
                         <button mat-icon-button >
                             <mat-icon>videocam</mat-icon>
                         </button>
-                        <button mat-icon-button >
+                        <button mat-icon-button matTooltip="Manage meetings"  matTooltipPosition="right" routerLink="/admin-managemeeting">
                             <mat-icon>groups</mat-icon>
                         </button>
                         <button mat-icon-button matTooltip="View history/logs" matTooltipPosition="right">
                             <mat-icon>history</mat-icon>
                         </button>
-                        <button mat-icon-button matTooltip="Sign out" matTooltipPosition="right">
+                        <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" routerLink="/">
                             <mat-icon>logout</mat-icon>
                         </button>
                     </div>
@@ -57,7 +57,7 @@
                             <h1>Welcome, Administrator!</h1>
                             <p>What would you like to do for today?</p>
                         </div>
-                        <button mat-flat-button>Approve Meeting</button>
+                        <button mat-flat-button routerLink="/admin-meetingapproval">Approve Meeting</button>
                     </div>
                     <div class="main__content">
                         <!-- Meetings container -->
@@ -117,11 +117,11 @@
                                 <mat-icon>videocam</mat-icon>
                                 <span>Start a New Meeting</span>
                             </div>
-                            <div class="graymeetingoption">
+                            <div class="graymeetingoption" routerLink="/admin-sharescreen">
                                 <mat-icon>screen_share</mat-icon>
                                 <span class="share_screen">Share Screen</span>
                             </div>
-                            <div class="graymeetingoption">
+                            <div class="graymeetingoption" routerLink="/admin-choosemeetingtype">
                                 <mat-icon>event</mat-icon>
                                 <span>Schedule a New Meeting</span>
                             </div>

@@ -42,6 +42,8 @@ import { StudRechistoryComponent } from './stud-rechistory/stud-rechistory.compo
 import { StudMeetingComponent } from './stud-meeting/stud-meeting.component';
 import { StudMeetingfullscreenComponent } from './stud-meetingfullscreen/stud-meetingfullscreen.component';
 import { StudSharescreenComponent } from './stud-sharescreen/stud-sharescreen.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -88,7 +90,10 @@ import { StudSharescreenComponent } from './stud-sharescreen/stud-sharescreen.co
     NgxMatNativeDateModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatTooltipModule
+    MatTooltipModule,
+    ReactiveFormsModule,
+    CommonModule, 
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

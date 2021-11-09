@@ -23,15 +23,15 @@
 
                     <!-- Sidenav buttons -->
                     <div class="sidenav__buttons">
-                        <button mat-button class="sidenav__button">
+                        <button mat-button class="sidenav__button" routerLink="/stud-home">
                             <mat-icon>home</mat-icon>
                             <span>Home</span>
                         </button>
-                        <button mat-button class="sidenav__button">
+                        <button mat-button class="sidenav__button" routerLink="/stud-rechistory">
                             <mat-icon>videocam</mat-icon>
                             <span>Records</span>
                         </button>
-                        <button mat-button class="sidenav__button">
+                        <button mat-button class="sidenav__button" routerLink="/">
                             <mat-icon>logout</mat-icon>
                             <span>Logout</span>
                         </button>
@@ -89,7 +89,7 @@
                                 </div>
                             </div>
                             <div class="videocall_buttons">
-                                <button mat-flat-button data-tooltip="Enter fullscreen">
+                                <button mat-flat-button data-tooltip="Enter fullscreen" routerLink="/stud-meetingfullscreen">
                                     <mat-icon>fullscreen</mat-icon>
                                 </button>
                                  <button mat-flat-button data-tooltip="Turn off camera">
