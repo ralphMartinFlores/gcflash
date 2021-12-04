@@ -22,6 +22,7 @@ import { StudRechistoryComponent } from './stud-rechistory/stud-rechistory.compo
 import { StudMeetingComponent } from './stud-meeting/stud-meeting.component';
 import { StudMeetingfullscreenComponent } from './stud-meetingfullscreen/stud-meetingfullscreen.component';
 import { StudSharescreenComponent } from './stud-sharescreen/stud-sharescreen.component';
+import { SchedmeetComponent } from './schedmeet/schedmeet.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -45,7 +46,8 @@ const routes: Routes = [
   { path: 'stud-rechistory', component: StudRechistoryComponent },
   { path: 'stud-meeting', component: StudMeetingComponent },
   { path: 'stud-meetingfullscreen', component: StudMeetingfullscreenComponent },
-  { path: 'stud-sharescreen', component: StudSharescreenComponent }
+  { path: 'stud-sharescreen', component: StudSharescreenComponent },
+  { path: 'lamp-schedmeet', component: SchedmeetComponent }
 ];
 
 @NgModule({

@@ -19,7 +19,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
-import {MatTooltipModule} from '@angular/material/tooltip';
+import {  MatTooltipModule  } from '@angular/material/tooltip';
+import { MatNativeDateModule } from '@angular/material/core';
 import { NgxMatDatetimePickerModule, NgxMatNativeDateModule, NgxMatTimepickerModule } from '@angular-material-components/datetime-picker';
 
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -44,6 +45,7 @@ import { StudMeetingfullscreenComponent } from './stud-meetingfullscreen/stud-me
 import { StudSharescreenComponent } from './stud-sharescreen/stud-sharescreen.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { SchedmeetComponent } from './schedmeet/schedmeet.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +71,8 @@ import { CommonModule } from '@angular/common';
     StudRechistoryComponent,
     StudMeetingComponent,
     StudMeetingfullscreenComponent,
-    StudSharescreenComponent
+    StudSharescreenComponent,
+    SchedmeetComponent
   ],
   imports: [
     BrowserModule,
@@ -93,7 +96,8 @@ import { CommonModule } from '@angular/common';
     MatTooltipModule,
     ReactiveFormsModule,
     CommonModule, 
-    FormsModule
+    FormsModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
